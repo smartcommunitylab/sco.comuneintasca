@@ -9,7 +9,7 @@ apps:
           autoPublish: true
           
         - type: it.smartcommunitylab.comuneintasca.core.model.DynamicConfigObject
-          url: http://www.comune.trento.it/comuneintasca/data
+          url: https://raw.githubusercontent.com/smartcommunitylab/sco.comuneintasca/master/src/main/resources/config.json
           serviceId: smartcampus.service.opendata
           methodName: it.smartcommunitylab.comuneintasca.connector.flows.ConfigFlow
           imagePath: http://www.comune.trento.it/

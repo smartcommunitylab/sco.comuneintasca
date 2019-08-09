@@ -1,0 +1,588 @@
+
+{
+  "highlights": [
+      {
+      "id": "d757ee0813bdcc5b6f74044e004226dc",
+      "name": {
+        "it": "Livetrento",
+        "en": "Livetrento",
+        "de": "Livetrento"
+      },
+      "image": {
+        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867529-1-ita-IT\/Livetrento.jpg",
+        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867534-2-eng-GB\/Livetrento.jpg",
+        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867539-3-ger-DE\/Livetrento.jpg"
+      },
+      "objectIds": [
+        "48b624c0fc02e87c43728ca839ae50f5"
+      ]
+    },
+    {
+      "id": "8cc43799380fcd360be1219b9fa6b152",
+      "name": {
+        "it": "Museum Pass",
+        "en": "Museum Pass",
+        "de": "Museum Pass"
+      },
+      "image": {
+        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622743-10-ita-IT\/Museum-Pass.jpg",
+        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622748-11-eng-GB\/Museum-Pass.jpg",
+        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622753-12-ger-DE\/Museum-Pass.jpg"
+      },
+      "objectIds": [
+        "text.3005"
+      ]
+    },
+    {
+      "id": "profile_cit_405be9ac05df567b4c87b4d31119e52e",
+      "name": {
+        "it": "Muse",
+        "en": "Muse",
+        "de": "Muse"
+      },
+      "image": {
+        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554673\/1-ita-IT\/Muse1.jpg",
+        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554678\/1-eng-GB\/Muse1.jpg",
+        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/in-evidenza\/muse\/8554683-2-ger-DE\/Muse.jpg"
+      },
+      "objectIds": [
+        "cultura.72"
+      ]
+    },
+    {
+      "id": "d347c18f3a931ae6a512b7d80591afd8",
+      "name": {
+        "it": "Come arrivare a Trento",
+        "en": "How to arrive to Trento",
+        "de": "Nach Trient kommen"
+      },
+      "image": {
+        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622728-36-ita-IT\/Come-arrivare-a-Trento.jpg",
+        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622733-37-eng-GB\/How-to-arrive-to-Trento.jpg",
+        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622738-38-ger-DE\/Nach-Trient-kommen.jpg"
+      },
+      "objectIds": [
+        "4b8834e1c27b237c07faebc96d8dab37"
+      ]
+    }
+  ],
+  "navigationItems": [
+    {
+      "ref": "profile_cit_2cc4db1674d9e8994658eac954355d31"
+    },
+    {
+      "ref": "profile_cit_csvimport_Visitare_item_comuneintasca"
+    },
+    {
+      "ref": "profile_cit_csvimport_Mangiare e dormire_item_comuneintasca"
+    },
+    {
+      "id": "profile_cit_csvimport_Viaggia Trento_item_comuneintasca",
+      "name": {
+        "it": "VIAGGIA TRENTO",
+        "en": "VIAGGIA TRENTO",
+        "de": "VIAGGIA TRENTO"
+      },
+      "app": {
+        "ios": null,
+        "android": "eu.trentorise.smartcampus.viaggiatrento "
+      }
+    },
+    {
+      "ref": "profile_cit_csvimport_Eventi_item_comuneintasca"
+    },
+    {
+      "ref": "profile_cit_csvimport_Percorsi_item_comuneintasca"
+    },
+    {
+      "ref": "profile_cit_csvimport_Info utili_item_comuneintasca"
+    }
+  ],
+  "menu": [
+    {
+      "id": "profile_cit_2cc4db1674d9e8994658eac954355d31",
+      "name": {
+        "it": "CONOSCERE",
+        "en": "DISCOVER",
+        "de": "KENNEN"
+      },
+      "items": [
+        {
+          "id": "profile_cit_8ea91c65223746d1c1ef32b06459e6ce",
+          "name": {
+            "it": "Trento si presenta",
+            "en": "Info",
+            "de": "Info"
+          },
+          "image": {
+            "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/menu-laterale\/conoscere\/trento-si-presenta\/8554796-1-ita-IT\/Trento-si-presenta.jpg",
+            "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554801\/1-eng-GB\/Info1.jpg",
+            "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/menu-laterale\/conoscere\/introduzione\/8554806-1-ger-DE\/Info.jpg"
+          },
+          "objectIds": [
+            "text.3001",
+            "text.3004"
+          ]
+        },
+        {
+          "id": "profile_cit_ed1faa2dc34d16cc326b42f82b5133da",
+          "name": {
+            "it": "Storia",
+            "en": "History",
+            "de": "Geschichte"
+          },
+          "image": {
+            "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554811\/1-ita-IT\/Storia1.jpg",
+            "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554816\/1-eng-GB\/History1.jpg",
+            "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/menu-laterale\/conoscere\/storia\/8554821-1-ger-DE\/Geschichte.jpg"
+          },
+          "objectIds": [
+            "text.3002"
+          ]
+        },
+        {
+          "id": "profile_cit_0cf4ca2629dd9f5ca239296a23a7525c",
+          "name": {
+            "it": "Il Concilio di Trento",
+            "en": "The Council of Trento",
+            "de": "Das Konzil von Trient"
+          },
+          "image": {
+            "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554826\/1-ita-IT\/Il-Concilio-di-Trento1.jpg",
+            "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554831\/1-eng-GB\/The-Council-of-Trento1.jpg",
+            "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/menu-laterale\/conoscere\/il-concilio-di-trento\/8554836-1-ger-DE\/Das-Konzil-von-Trient.jpg"
+          },
+          "objectIds": [
+            "text.3003"
+          ]
+        },
+        {
+          "id": "profile_cit_915d69563fde959851fe54862df74da3",
+          "name": {
+            "it": "Eventi principali",
+            "en": "Main Events",
+            "de": "Hauptereignisse"
+          },
+          "query": {
+            "type": "iniziativa",
+            "classifications": [
+              {
+                "tipo_evento": "\"Eventi principali\""
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_74d4ff66560754b78e0c72b19069c4d9",
+          "name": {
+            "it": "Il Monte Bondone",
+            "en": "Il Monte Bondone",
+            "de": "Il Monte Bondone"
+          },
+          "image": {
+            "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/menu-laterale\/conoscere\/il-monte-bondone\/8554856-11-ita-IT\/Il-Monte-Bondone.jpg",
+            "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/menu-laterale\/conoscere\/il-monte-bondone\/8554861-2-eng-GB\/Il-Monte-Bondone.jpg",
+            "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/menu-laterale\/conoscere\/il-monte-bondone\/8554866-2-ger-DE\/Il-Monte-Bondone.jpg"
+          },
+          "objectIds": [
+            "text.3018",
+            "text.3020",
+            "text.3019",
+            "text.3021"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "profile_cit_csvimport_Visitare_item_comuneintasca",
+      "name": {
+        "it": "VISITARE",
+        "en": "HIGHLIGHTS",
+        "de": "WAS ZU  BESICHTIGEN"
+      },
+      "items": [
+        {
+          "id": "profile_cit_csvimport_Musei_item_comuneintasca",
+          "name": {
+            "it": "Musei",
+            "en": "Museums",
+            "de": "Museen"
+          },
+          "query": {
+            "type": "luogo",
+            "classifications": [
+              {
+                "tipo_luogo": "Musei"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Edifici storici_item_comuneintasca",
+          "name": {
+            "it": "Edifici storici",
+            "en": "Historic Buildings",
+            "de": "Historische Geb\u00e4ude"
+          },
+          "query": {
+            "type": "luogo",
+            "classifications": [
+              {
+                "tipo_luogo": "Edificio storico"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Chiese_item_comuneintasca",
+          "name": {
+            "it": "Chiese",
+            "en": "Churches",
+            "de": "Kirchen"
+          },
+          "image": {
+            "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/menu-laterale\/visitare\/chiese\/8554901-2-ita-IT\/Chiese.jpg",
+            "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554906\/2-eng-GB\/Churches1.jpg",
+            "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554911\/2-ger-DE\/Kirchen1.jpg"
+          },
+          "query": {
+            "type": "luogo",
+            "classifications": [
+              {
+                "tipo_luogo": "Chiesa"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Aree archeologiche_item_comuneintasca",
+          "name": {
+            "it": "Aree archeologiche",
+            "en": "Archaeological Areas",
+            "de": "Arch\u00e4ologische St\u00e4tten"
+          },
+          "query": {
+            "type": "luogo",
+            "classifications": [
+              {
+                "tipo_luogo": "Area archeologica"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Natura_item_comuneintasca",
+          "name": {
+            "it": "Natura",
+            "en": "Nature",
+            "de": "Natur"
+          },
+          "query": {
+            "type": "luogo",
+            "classifications": [
+              {
+                "tipo_luogo": "Natura"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Altri siti di interesse artistico_item_comuneintasca",
+          "name": {
+            "it": "Altri siti di interesse storico artistico",
+            "en": "Other sites of historical and artistic interest",
+            "de": "Andere Seiten von historischem und k\u00fcnstlerischem Interesse"
+          },
+          "query": {
+            "type": "luogo",
+            "classifications": [
+              {
+                "tipo_luogo": "Altri siti di interesse storico artistico"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile_cit_csvimport_Mangiare e dormire_item_comuneintasca",
+      "name": {
+        "it": "MANGIARE E DORMIRE",
+        "en": "RESTAURANTS & HOTELS",
+        "de": "GASTRONOMIE UND \u00dcBERNACHTUNG"
+      },
+      "items": [
+        {
+          "id": "profile_cit_csvimport_Mangiare_item_comuneintasca",
+          "name": {
+            "it": "Mangiare",
+            "en": "Restaurants",
+            "de": "Gastronomie"
+          },
+          "query": {
+            "type": "ristorante",
+            "classifications": null
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Dormire_item_comuneintasca",
+          "name": {
+            "it": "Dormire",
+            "en": "Hotels",
+            "de": "\u00dcbernachtung"
+          },
+          "query": {
+            "type": "accomodation",
+            "classifications": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile_cit_csvimport_Eventi_item_comuneintasca",
+      "name": {
+        "it": "EVENTI",
+        "en": "EVENTS",
+        "de": "VERANSTALTUNGEN"
+      },
+      "items": [
+        {
+          "id": "profile_cit_csvimport_Tutti gli eventi_item_comuneintasca",
+          "name": {
+            "it": "Tutti gli eventi",
+            "en": "All events",
+            "de": "Alle Veranstaltungen"
+          },
+          "query": {
+            "type": "event",
+            "classifications": null
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Iniziative varie_item_comuneintasca",
+          "name": {
+            "it": "Mostre",
+            "en": "Exhibitions",
+            "de": "Ausstellungen"
+          },
+          "query": {
+            "type": "event",
+            "classifications": [
+              {
+                "tipo_evento": "\"Mostre\""
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Spettacoli_item_comuneintasca",
+          "name": {
+            "it": "Spettacoli",
+            "en": "Shows",
+            "de": "Shows"
+          },
+          "query": {
+            "type": "event",
+            "classifications": [
+              {
+                "tipo_evento": "Spettacoli"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Incontri, convegni e conferenze_item_comuneintasca",
+          "name": {
+            "it": "Incontri, convegni e conferenze",
+            "en": "Meetings, seminars and conferences",
+            "de": "Tagungen, Seminare und Konferenzen"
+          },
+          "query": {
+            "type": "event",
+            "classifications": [
+              {
+                "tipo_evento": "Incontri, convegni e conferenze"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Feste, mercati e fiere_item_comuneintasca",
+          "name": {
+            "it": "Feste, mercati e fiere",
+            "en": "Festivals, markets and fairs",
+            "de": "Festivals, M\u00e4rkte und Messen"
+          },
+          "query": {
+            "type": "event",
+            "classifications": [
+              {
+                "tipo_evento": "Feste, mercati e fiere"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Competizioni e gare_item_comuneintasca",
+          "name": {
+            "it": "Competizioni e gare",
+            "en": "Competitions and contests",
+            "de": "Wettbewerbe und Gewinnspiele"
+          },
+          "query": {
+            "type": "event",
+            "classifications": [
+              {
+                "tipo_evento": "Competizioni e gare"
+              }
+            ]
+          }
+        },
+        {
+          "id": "24edf0c174b14eb2e4cc51b7223bed6e",
+          "name": {
+            "it": "Manifestazioni",
+            "en": "Event series",
+            "de": "Veranstaltungsreihe"
+          },
+          "query": {
+            "type": "iniziativa",
+            "classifications": [
+              {
+                "tipo_evento": "\"Manifestazioni\""
+              }
+            ]
+          }
+        },
+        {
+          "id": "da3a5dacdd9a11ca9c3eb2241489ea34",
+          "name": {
+            "it": "Iniziative varie",
+            "en": "Various initiatives",
+            "de": "Verschiedene Initiativen"
+          },
+          "query": {
+            "type": "event",
+            "classifications": [
+              {
+                "tipo_evento": "Iniziative varie"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile_cit_csvimport_Percorsi_item_comuneintasca",
+      "name": {
+        "it": "PERCORSI",
+        "en": "TOURISTIC ITINERARIES",
+        "de": "TOUREN UND ROUTEN"
+      },
+      "items": [
+        {
+          "id": "profile_cit_992a7ca32e9a335c575a46b6988c46a8",
+          "name": {
+            "it": "Percorsi Turistici",
+            "en": "Touristic Itineraries",
+            "de": "Touren und Routen"
+          },
+          "query": {
+            "type": "itinerario",
+            "classifications": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile_cit_csvimport_Info utili_item_comuneintasca",
+      "name": {
+        "it": "INFO UTILI",
+        "en": "USEFUL  INFORMATION",
+        "de": "WEITERE INFORMATIONEN"
+      },
+      "items": [
+        {
+          "id": "profile_cit_csvimport_Servizi_item_comuneintasca",
+          "name": {
+            "it": "Servizi",
+            "en": "Services",
+            "de": "Dienstleistungen"
+          },
+          "query": {
+            "type": "folder",
+            "classifications": [
+              {
+                "classifications": "Servizi"
+              }
+            ]
+          }
+        },
+        {
+          "id": "profile_cit_csvimport_Contatti_item_comuneintasca",
+          "name": {
+            "it": "Contatti",
+            "en": "Contacts",
+            "de": "Kontakte"
+          },
+          "query": {
+            "type": "folder",
+            "classifications": [
+              {
+                "classifications": "Contatti"
+              }
+            ]
+          }
+        },
+        {
+          "id": "184aeb2b2cc299fa85bb3e314eac2b4c",
+          "name": {
+            "it": "Farmacie",
+            "en": "Pharmacies",
+            "de": "Apotheken"
+          },
+          "query": {
+            "type": "luogo",
+            "classifications": [
+              {
+                "tipo_luogo": "Farmacia"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e0514a579fefc1cd9a6c692fcd7264ee",
+          "name": {
+            "it": "Arrivare a Trento",
+            "en": null,
+            "de": null
+          },
+          "image": {
+            "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/menu-laterale\/info-utili\/arrivare-a-trento\/8727290-1-ita-IT\/Arrivare-a-Trento.jpg",
+            "en": null,
+            "de": null
+          },
+          "objectIds": [
+            "4b8834e1c27b237c07faebc96d8dab37"
+          ]
+        },
+        {
+          "id": "805c1f12f90bf1607f20b7f8981f31b3",
+          "name": {
+            "it": "Parcheggi",
+            "en": "Parking",
+            "de": "Parkplatz"
+          },
+          "query": {
+            "type": "luogo",
+            "classifications": [
+              {
+                "tipo_luogo": "Parcheggio"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
