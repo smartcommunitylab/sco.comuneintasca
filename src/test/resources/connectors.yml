@@ -1,0 +1,59 @@
+apps:
+  - id: test
+    sources: 
+        - type: it.smartcommunitylab.comuneintasca.core.model.ItineraryObject
+          url: https://www.comune.trento.it/api/opendata/v1/content/class/itinerario/offset/0/limit/10
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.ItinerariesFlow
+          imagePath: https://www.comune.trento.it/
+          autoPublish: true
+
+        - type: it.smartcommunitylab.comuneintasca.core.model.EventObject
+          url: https://www.comune.trento.it/api/opendata/v1/content/class/event/offset/0/limit/10
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.EventsFlow
+          imagePath: https://url.it
+          autoPublish: true
+
+        - type: it.smartcommunitylab.comuneintasca.core.model.DynamicConfigObject
+          url: https://www.comune.trento.it/comuneintasca/data
+          #url: file:///Users/raman/workspace/cit/comuneintasca/smartcampus.vas.comuneintasca.web/src/test/resources/config.json
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.ConfigFlow
+          imagePath: https://url.it
+
+        - type: it.smartcommunitylab.comuneintasca.core.model.RestaurantObject
+          url: https://www.comune.trento.it/api/opendata/v1/content/class/ristorante/offset/0/limit/1
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.RestaurantsFlow
+          imagePath: https://www.comune.trento.it/
+          autoPublish: true
+          
+        - type: it.smartcommunitylab.comuneintasca.core.model.HotelObject
+          url: https://www.comune.trento.it/api/opendata/v1/content/class/accomodation/offset/0/limit/1
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.HotelsFlow
+          imagePath: https://www.comune.trento.it/
+          autoPublish: true
+          
+        - type: it.smartcommunitylab.comuneintasca.core.model.POIObject
+          url: https://www.comune.trento.it/api/opendata/v1/content/class/luogo/offset/0/limit/1
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.CulturaFlow
+          imagePath: https://www.comune.trento.it/
+          autoPublish: true
+          
+        - type: it.smartcommunitylab.comuneintasca.core.model.MainEventObject
+          url: https://www.comune.trento.it/api/opendata/v1/content/class/iniziativa/offset/0/limit/1
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.MainEventsFlow
+          imagePath: https://www.comune.trento.it/
+          autoPublish: true
+          
+        - type: it.smartcommunitylab.comuneintasca.core.model.ContentObject
+          url: https://www.comune.trento.it/api/opendata/v1/content/class/folder/offset/0/limit/1
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.TextsFlow
+          imagePath: https://www.comune.trento.it/
+          autoPublish: true
+          
