@@ -18,7 +18,7 @@ import org.yaml.snakeyaml.constructor.Constructor;
 @Component
 public class AppSetup {
 
-	@Value("classpath:/apps-access.yml")
+	@Value("${app.setup}")
 	private Resource resource;
 
 	@PostConstruct
