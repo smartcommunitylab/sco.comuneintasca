@@ -15,6 +15,9 @@
  ******************************************************************************/
 package it.smartcommunitylab.comuneintasca.core.data;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -23,6 +26,11 @@ import org.lightcouch.CouchDbClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import it.smartcommunitylab.comuneintasca.core.model.AppObject;
 import it.smartcommunitylab.comuneintasca.core.model.DynamicConfigObject;
 import it.smartcommunitylab.comuneintasca.core.model.MenuItem;
 
@@ -55,11 +63,11 @@ public class CouchDBStorage {
 	}
 	
 	
-	public <T> void storeObject(T ob) {
+	public <T extends AppObject> void storeObject(T ob) {
 		if (ob instanceof DynamicConfigObject) {
 			DynamicConfigObject conf = (DynamicConfigObject) ob;
 			List<MenuItem> highlights = conf.getHighlights();
-			List<MenuItem> old = db.findDocs("{\"selector\": { \"elementType\": \"gallery-item\"}}", MenuItem.class);
+			List<HashMap> old = db.findDocs("{\"selector\": { \"elementType\": \"gallery-item\"}}", HashMap.class);
 			old.forEach(o -> db.remove(o));
 			highlights.forEach(h -> {
 				h.setElementType("gallery-item");
@@ -67,11 +75,29 @@ public class CouchDBStorage {
 			});
 			
 		}
-		db.save(ob);
+		List<HashMap> docs = db.findDocs("{\"selector\": { \"id\": \""+ob.getId()+"\", \"appId\":\""+ob.getAppId()+"\"}}", HashMap.class);
+		if (docs != null && docs.size() > 0) {
+			String _id = (String) docs.get(0).get("_id");
+			String _rev = (String) docs.get(0).get("_rev");
+			HashMap toSave = new ObjectMapper().convertValue(ob, HashMap.class);
+			toSave.put("_id", _id);
+			toSave.put("_rev", _rev);
+			db.update(toSave);
+		} else  {
+			db.save(ob);
+		}
 	}
 	
-	public <T> void deleteObject(T ob) {
-		db.remove(ob);
+	@SuppressWarnings("unchecked")
+	public <T extends AppObject> void deleteObject(T ob) {
+		try {
+			List<HashMap> docs = db.findDocs("{\"selector\": { \"id\": \""+ob.getId()+"\", \"appId\":\""+ob.getAppId()+"\"}}", HashMap.class);
+			if (docs != null && docs.size() > 0) {
+				db.remove(docs.get(0));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -24,16 +24,6 @@ public class DynamicConfigObject extends AppObject {
 	private List<MenuItem> navigationItems;
 	private List<MenuItem> menu;
 
-	private Long lastModified = null;
-
-	public Long getLastModified() {
-		return lastModified;
-	}
-
-	public void setLastModified(Long lastModified) {
-		this.lastModified = lastModified;
-	}
-
 	public DynamicConfigObject() {
 	}
 
