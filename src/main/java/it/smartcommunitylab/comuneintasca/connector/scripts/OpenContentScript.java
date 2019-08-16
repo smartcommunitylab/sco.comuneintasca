@@ -24,6 +24,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
+import org.springframework.util.StringUtils;
+
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.protobuf.Message;
@@ -89,6 +91,7 @@ public class OpenContentScript {
 	protected Map<String, Map<String, Object>> buildMap(List<String> langs, String... json) throws Exception {
 		Map<String, Map<String, Object>> result = new TreeMap<String, Map<String, Object>>();
 		for (int i = 0; i < langs.size(); i++) {
+			if (StringUtils.isEmpty(json[i])) continue;
 			Map<String, Object> map = mapper.readValue(json[i], Map.class);
 			result.put(langs.get(i), map);
 		}

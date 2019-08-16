@@ -88,6 +88,19 @@ public class CouchDBStorage {
 		}
 	}
 	
+
+
+	/**
+	 * @param o
+	 */
+	public <T extends AppObject> void storeObjectIfMissing(T ob) {
+		List<HashMap> docs = db.findDocs("{\"selector\": { \"id\": \""+ob.getId()+"\", \"appId\":\""+ob.getAppId()+"\"}}", HashMap.class);
+		if (docs == null || docs.size() == 0) {
+			db.save(ob);
+		} 
+		
+	}
+	
 	@SuppressWarnings("unchecked")
 	public <T extends AppObject> void deleteObject(T ob) {
 		try {
@@ -99,5 +112,6 @@ public class CouchDBStorage {
 			e.printStackTrace();
 		}
 	}
+
 
 }

@@ -32,6 +32,7 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Component;
 
 import it.smartcommunitylab.comuneintasca.core.model.AppObject;
+import it.smartcommunitylab.comuneintasca.storage.data.BasicObject;
 import it.smartcommunitylab.comuneintasca.storage.data.SyncData;
 import it.smartcommunitylab.comuneintasca.storage.exception.DataException;
 
@@ -52,9 +53,17 @@ public class AppSyncStorage  {
 	private CouchDBStorage extraStorage;
 	
 	@Autowired
-	public AppSyncStorage(MongoOperations mongoTemplate) throws MalformedURLException {
+	public AppSyncStorage(MongoOperations mongoTemplate) throws Exception {
 		draftStorage = new AppSyncSubStorage(mongoTemplate, DRAFT_COLLECTION);
 		publishStorage = new AppSyncSubStorage(mongoTemplate, PUBLISH_COLLECTION);
+	}
+	
+	@PostConstruct
+	public void syncExtrStorage() throws DataException {
+		List<BasicObject> all = publishStorage.getAllObjects();
+		all.forEach(o -> {
+			extraStorage.storeObjectIfMissing((AppObject)o);
+		});
 	}
 
 	public SyncData getSyncAppData(long since, String appId, Map<String, Object> include, Map<String, Object> exclude) throws DataException {
