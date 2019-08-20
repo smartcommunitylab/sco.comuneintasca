@@ -298,6 +298,9 @@
             "classifications": [
               {
                 "tipo_luogo": "Altri siti di interesse storico artistico"
+              },
+              {
+                "tipo_luogo": "Altri siti di interesse turistico"
               }
             ]
           }
