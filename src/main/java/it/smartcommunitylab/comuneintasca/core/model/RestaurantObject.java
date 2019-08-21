@@ -20,19 +20,11 @@ import java.util.Map;
 public class RestaurantObject extends GeoCITObject {
 	private static final long serialVersionUID = -5567010752470052310L;
 
-	private Map<String,String> classification;
 	private Map<String,String> timetable;
 	private Map<String,String> closing;
 	private Map<String,String> equipment;
 	private Map<String,String> prices;
 
-
-	public Map<String, String> getClassification() {
-		return classification;
-	}
-	public void setClassification(Map<String, String> classification) {
-		this.classification = classification;
-	}
 	public Map<String, String> getTimetable() {
 		return timetable;
 	}

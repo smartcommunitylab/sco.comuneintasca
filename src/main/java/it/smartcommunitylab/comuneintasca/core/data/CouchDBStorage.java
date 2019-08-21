@@ -15,8 +15,6 @@
  ******************************************************************************/
 package it.smartcommunitylab.comuneintasca.core.data;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 
@@ -26,8 +24,6 @@ import org.lightcouch.CouchDbClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import it.smartcommunitylab.comuneintasca.core.model.AppObject;
@@ -39,6 +35,7 @@ import it.smartcommunitylab.comuneintasca.core.model.MenuItem;
  *
  */
 @Component
+@SuppressWarnings({"unchecked", "rawtypes"})
 public class CouchDBStorage {
 
 	@Value("${couchdb.host:localhost}")
@@ -88,8 +85,6 @@ public class CouchDBStorage {
 		}
 	}
 	
-
-
 	/**
 	 * @param o
 	 */
@@ -97,11 +92,16 @@ public class CouchDBStorage {
 		List<HashMap> docs = db.findDocs("{\"selector\": { \"id\": \""+ob.getId()+"\", \"appId\":\""+ob.getAppId()+"\"}}", HashMap.class);
 		if (docs == null || docs.size() == 0) {
 			db.save(ob);
-		} 
+		} else {
+			HashMap old = docs.get(0);
+			if (!old.containsKey("cat") && ob.getCat() != null) {
+				old.put("cat", ob.getCat());
+				db.update(old);
+			}
+		}
 		
 	}
 	
-	@SuppressWarnings("unchecked")
 	public <T extends AppObject> void deleteObject(T ob) {
 		try {
 			List<HashMap> docs = db.findDocs("{\"selector\": { \"id\": \""+ob.getId()+"\", \"appId\":\""+ob.getAppId()+"\"}}", HashMap.class);

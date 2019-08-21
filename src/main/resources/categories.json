@@ -1,0 +1,267 @@
+{
+	"poi": {
+		"Musei": {
+			"it": [
+				"Musei"
+			],
+			"en": [
+				"Museums"
+			],
+			"de": [
+				"Museen"
+			]
+		},
+		"Edifici storici": {
+			"it": ["Edifici storici"],
+			"en": ["Historic Buildings"],
+			"de": ["Historische Geb\u00e4ude"]
+		},
+		"Chiese": {
+			"it": ["Chiese"],
+			"en": ["Churches"],
+			"de": ["Kirchen"]
+		},
+		"Aree archeologiche": {
+			"it": ["Aree archeologiche"],
+			"en": ["Archaeological Areas"],
+			"de": ["Arch\u00e4ologische St\u00e4tten"]
+		},
+        "Area archeologica": {
+            "it": ["Aree archeologiche"],
+            "en": ["Archaeological Areas"],
+            "de": ["Arch\u00e4ologische St\u00e4tten"]
+        },
+		"Natura": {
+			"it": ["Natura"],
+			"en": ["Nature"],
+			"de": ["Natur"]
+		},
+		"Altri siti di interesse storico artistico": {
+			"it": ["Altri siti di interesse storico artistico"],
+			"en": ["Other sites of historical and artistic interest"],
+			"de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
+		},
+		"Altri siti di interesse turistico": {
+			"it": ["Altri siti di interesse storico artistico"],
+			"en": ["Other sites of historical and artistic interest"],
+			"de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
+		},
+		"Parcheggi": {
+			"it": ["Parcheggi"],
+			"en": ["Parking"],
+			"de": ["Parkplatz"]
+		},
+		"Farmacie": {
+			"it": ["Farmacie"],
+			"en": ["Pharmacies"],
+			"de": ["Apotheken"]
+		}
+	},
+	"mainevent": {
+		"Eventi principali": {
+			"it": [
+				"Eventi principali"
+			],
+			"en": [
+				"Main Events"
+			],
+			"de": [
+				"Hauptereignisse"
+			]
+		}
+	},
+	"event": {
+		"Mostre": {
+			"it": ["Mostre"],
+			"en": ["Exhibitions"],
+			"de": ["Ausstellungen"]
+		},
+		"Spettacoli": {
+			"it": ["Spettacoli"],
+			"en": ["Shows"],
+			"de": ["Shows"]
+		},
+		"Incontri, convegni e conferenze": {
+			"it": ["Incontri, convegni e conferenze"],
+			"en": ["Meetings, seminars and conferences"],
+			"de": ["Tagungen, Seminare und Konferenzen"]
+		},
+		"Feste, mercati e fiere": {
+			"it": ["Feste, mercati e fiere"],
+			"en": ["Festivals, markets and fairs"],
+			"de": ["Festivals, M\u00e4rkte und Messen"]
+		},
+		"Competizioni e gare": {
+			"it": ["Competizioni e gare"],
+			"en": ["Competitions and contests"],
+			"de": ["Wettbewerbe und Gewinnspiele"]
+		},
+		"Manifestazioni": {
+			"it": ["Manifestazioni"],
+			"en": ["Event series"],
+			"de": ["Veranstaltungsreihe"]
+		},
+		"Iniziative varie": {
+			"it": ["Iniziative varie"],
+			"en": ["Various initiatives"],
+			"de": ["Verschiedene Initiativen"]
+		}
+	},
+	"content": {
+		"Servizi": {
+			"it": ["Servizi"],
+			"en": ["Services"],
+			"de": ["Dienstleistungen"]
+		},
+		"Contatti": {
+			"it": ["Contatti"],
+			"en": ["Contacts"],
+			"de": ["Kontakte"]
+		}
+	},
+	"restaurant": {
+		"Pizzeria": {
+			"it": [
+				"Pizzeria"
+			],
+			"de": [
+				"Pizzeria"
+			],
+			"en": [
+				"Pizzeria"
+			]
+		},
+		"Bar": {
+			"de": ["Bar"],
+			"en": ["Bar"],
+			"it": ["Bar"]
+		},
+		"Ristorante": {
+			"it": ["Ristorante"],
+			"de": ["Restaurant"],
+			"en": ["Restaurant"]
+		},
+		"Steakhouse": {
+			"de": ["Steakhouse"],
+			"en": ["Steakhouse"],
+			"it": ["Steakhouse"]
+		},
+		"Osteria tipica": {
+			"de": ["Osteria"],
+			"en": ["Osteria"],
+			"it": ["Osteria"]
+		},
+		"Osteria": {
+			"de": ["Osteria"],
+			"en": ["Osteria"],
+			"it": ["Osteria"]
+		},
+		"Specialità giapponesi": {
+			"de": ["Japanische Spezialitäten"],
+			"en": ["Japanese specialities"],
+			"it": ["Specialità giapponesi"]
+		},
+		"Specialità orientali": {
+			"de": ["Orientalische Spezialitäten"],
+			"en": ["Oriental specialities"],
+			"it": ["Specialità orientali"]
+		},
+		"Birreria": {
+			"de": ["Bierstube"],
+			"en": ["Pub"],
+			"it": ["Birreria"]
+		},
+		"Agritur": {
+			"de": ["Agritourismusbetrieb"],
+			"en": ["Agritur (Farmhouse Inn)"],
+			"it": ["Agritur"]
+		},
+		"Fast food": {
+			"de": ["Fast food"],
+			"en": ["Fast food"],
+			"it": ["Fast food"]
+		},
+		"Trattoria": {
+			"de": ["Gastwirtschaft"],
+			"en": ["Trattoria (family restaurant)"],
+			"it": ["Trattoria"]
+		},
+		"Wine Bar": {
+			"de": ["Wine Bar"],
+			"en": ["Wine Bar"],
+			"it": ["Wine Bar"]
+		},
+		"Specialità giapponese e cinese": {
+			"de": ["Japanische und chinesische Spezialitäten"],
+			"en": ["Japanese and Chinese specialities"],
+			"it": ["Specialità giapponese e cinese"]
+		},
+		"Specialità thailandese e cinese": {
+			"de": ["Thailändische und chinesische Spezialitäten"],
+			"en": ["Thai and Chinese specialities"],
+			"it": ["Specialità thailandese e cinese"]
+		},
+		"Risto Pub": {
+			"de": ["Risto Pub"],
+			"en": ["Risto Pub"],
+			"it": ["Risto Pub"]
+		},
+		"Self-service": {
+			"de": ["Self-service"],
+			"en": ["Self-service"],
+			"it": ["Self-service"]
+		},
+		"Ristorante enologico": {
+			"de": ["Ristorante enologico"],
+			"en": ["Ristorante enologico"],
+			"it": ["Ristorante enologico"]
+		},
+		"Specialità cinese": {
+			"de": ["Chinesische Spezialitäten"],
+			"en": ["Chinese specialities"],
+			"it": ["Specialità cinese"]
+		}
+	},
+	"hotel": {
+    	"Bed and Breakfast": {
+            "de": ["Bed and Breakfast"],
+            "en": ["Bed and Breakfast"],
+            "it": ["Bed and Breakfast"]
+        },
+        "Hotel": {
+            "de": ["Hotel"],
+            "en": ["Hotel"],
+            "it": ["Hotel"]
+        },
+        "Rifugi": {
+            "de": ["Berghütten"],
+            "en": ["Mountain huts"],
+            "it": ["Rifugi"]
+        },
+        "Appartamenti per vacanze": {
+            "de": ["Ferienwohnungen"],
+            "en": ["Holiday apartments"],
+            "it": ["Appartamenti per vacanze"]
+        },
+        "Affittacamere": {
+            "de": ["Zimmervermietung"],
+            "en": ["Landlord"],
+            "it": ["Affittacamere"]
+        },
+        "Agritur": {
+            "de": ["Agritourismusbetrieb"],
+            "en": ["Farmhouse Inn"],
+            "it": ["Agritur"]
+        },
+        "Campeggi": {
+            "de": ["Campingplatz"],
+            "en": ["Camp-site"],
+            "it": ["Campeggi"]
+        },
+        "Ostelli": {
+            "de": ["Jugendherberge"],
+            "en": ["Youth Hostel"],
+            "it": ["Ostelli"]
+        }
+	}
+}

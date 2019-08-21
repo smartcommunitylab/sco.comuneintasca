@@ -1,25 +1,22 @@
 package it.smartcommunitylab.comuneintasca.connector.processor;
 
-import it.smartcommunitylab.comuneintasca.connector.SourceEntry;
-import it.smartcommunitylab.comuneintasca.core.model.ContentObject;
-import it.smartcommunitylab.comuneintasca.core.model.EventObject;
-import it.smartcommunitylab.comuneintasca.core.model.HotelObject;
-import it.smartcommunitylab.comuneintasca.core.model.ItineraryObject;
-import it.smartcommunitylab.comuneintasca.core.model.MainEventObject;
-import it.smartcommunitylab.comuneintasca.core.model.Organization;
-import it.smartcommunitylab.comuneintasca.core.model.POIObject;
-import it.smartcommunitylab.comuneintasca.core.model.RestaurantObject;
-import it.smartcommunitylab.comuneintasca.core.model.TerritoryServiceObject;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
-import org.springframework.stereotype.Component;
+import javax.annotation.PostConstruct;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.protobuf.ByteString;
 
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata;
@@ -31,6 +28,17 @@ import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nMain
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nRestaurant;
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nString;
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nTesto;
+import it.smartcommunitylab.comuneintasca.connector.SourceEntry;
+import it.smartcommunitylab.comuneintasca.core.model.ContentObject;
+import it.smartcommunitylab.comuneintasca.core.model.EventObject;
+import it.smartcommunitylab.comuneintasca.core.model.HotelObject;
+import it.smartcommunitylab.comuneintasca.core.model.ItineraryObject;
+import it.smartcommunitylab.comuneintasca.core.model.MainEventObject;
+import it.smartcommunitylab.comuneintasca.core.model.Organization;
+import it.smartcommunitylab.comuneintasca.core.model.POIObject;
+import it.smartcommunitylab.comuneintasca.core.model.RestaurantObject;
+import it.smartcommunitylab.comuneintasca.core.model.TerritoryServiceObject;
+import it.smartcommunitylab.comuneintasca.core.model.TypeConstants;
 
 /**
  * Convert data to the internal format
@@ -40,6 +48,22 @@ import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nTest
 @Component
 public class DataExtractor {
 
+	@Value("classpath:/categories.json")
+	private Resource resource;
+	
+	private Map<String, Map<String, Map<String, List<String>>>> categoryMap;
+
+	@SuppressWarnings("unchecked")
+	@PostConstruct
+	public void init() throws Exception {
+		categoryMap = new ObjectMapper().readValue(resource.getInputStream(), Map.class);
+	}
+
+	public Map<String, List<String>> getICategories(String type, String it) {
+		Map<String, List<String>>  map = categoryMap.getOrDefault(type, Collections.emptyMap()).get(it);
+		return map != null ? Collections.unmodifiableMap(map) : null;
+	}
+	
 	public interface Extractor<S,T> {
 		public S readData(ByteString bs) throws Exception;
 		public T extractData(S bs, SourceEntry source);
@@ -60,6 +84,8 @@ public class DataExtractor {
 			no.setId(bt.getId());
 			no.setAddress(Collections.singletonMap("it", bt.getAddress()));
 			no.setCategory(bt.getCategory());
+			no.setCat(toCat(TypeConstants.TYPE_EVENT, Collections.singletonMap("it", bt.getCategory())));
+			
 			no.setCost(Collections.singletonMap("it", bt.getCost()));
 			no.setDescription(Collections.singletonMap("it", bt.getDescription()));
 			no.setDuration(Collections.singletonMap("it", bt.getDuration()));
@@ -127,6 +153,14 @@ public class DataExtractor {
 			no.setAddress(toMap(bt.getAddress()));
 			no.setCategory("ristorazione");
 			no.setClassification(toMap(bt.getClassification()));
+			String cats = no.getClassification().get("it");
+			if (!StringUtils.isEmpty(cats)) {
+				Set<String> catSet = StringUtils.commaDelimitedListToSet(cats);
+				final Map<String, List<String>> res = new HashMap<>();
+				catSet.forEach(c -> mergeCat(res, getICategories(TypeConstants.TYPE_RESTAURANT, c.trim())));
+				no.setCat(res);
+			}
+
 			no.setClosing(toMap(bt.getClosing()));
 
 			Map<String, String> contacts = new HashMap<String, String>();
@@ -177,6 +211,7 @@ public class DataExtractor {
 			no.setAddress(toMap(bt.getAddress()));
 			no.setCategory("dormire");
 			no.setClassification(toMap(bt.getClassification()));
+			no.setCat(toCat(TypeConstants.TYPE_HOTEL, no.getClassification()));
 
 			Map<String, String> contacts = new HashMap<String, String>();
 			contacts.put("email", bt.getEmail());
@@ -226,6 +261,7 @@ public class DataExtractor {
 			no.setCategory("cultura");
 			// TODO: classification
 			no.setClassification(toMap(bt.getClassification()));
+			no.setCat(toCat(TypeConstants.TYPE_POI, no.getClassification()));
 
 			Map<String, String> contacts = new HashMap<String, String>();
 			contacts.put("email", bt.getEmail());
@@ -274,6 +310,7 @@ public class DataExtractor {
 			no.setCategory("event");
 			// TODO: classification
 			no.setClassification(toMap(bt.getClassification()));
+			no.setCat(toCat(TypeConstants.TYPE_MAINEVENT, no.getClassification()));
 
 			Map<String, String> contacts = new HashMap<String, String>();
 			contacts.put("email", bt.getEmail());
@@ -322,6 +359,7 @@ public class DataExtractor {
 			ItineraryObject no = new ItineraryObject();
 			no.setId(bt.getId());
 			no.setCategory("itinerari");
+			no.setCat(toListMap(toMap(bt.getClassification())));
 			no.setDescription(toMap(bt.getDescription()));
 			no.setImage(getImageURL(bt.getImage(), entry));
 			no.setLastModified(bt.getLastModified());
@@ -363,6 +401,7 @@ public class DataExtractor {
 			no.setId(bt.getId());
 			no.setCategory("text");
 			no.setClassification(toMap(bt.getClassification()));
+			no.setCat(toCat(TypeConstants.TYPE_CONTENT, no.getClassification()));
 
 			no.setDescription(toMap(bt.getDescription()));
 			no.setImage(getImageURL(bt.getImage(), entry));
@@ -409,6 +448,7 @@ public class DataExtractor {
 			no.setCategory("servizio_sul_territorio");
 			// TODO: classification
 			no.setClassification(toMap(bt.getClassification()));
+			no.setCat(toListMap(no.getClassification()));
 
 			Map<String, String> contacts = new HashMap<String, String>();
 			contacts.put("email", bt.getEmail());
@@ -473,4 +513,26 @@ public class DataExtractor {
 		}
 		return map;
 	}
+	
+	private Map<String, List<String>> toCat(String type, Map<String, String> map) {
+		return getICategories(type, map.get("it"));
+	}
+	
+	private Map<String, List<String>> toListMap(Map<String, String> map) {
+		HashMap<String, List<String>> res = new HashMap<>();
+		map.entrySet().forEach(e -> res.put(e.getKey(), Collections.singletonList(e.getValue())));
+		return res;
+	}
+
+	private void mergeCat(Map<String, List<String>> res, Map<String, List<String>> iCategories) {
+		if (iCategories != null) {
+			iCategories.entrySet().forEach(e -> {
+				List<String> list = res.getOrDefault(e.getKey(), new LinkedList<>());
+				list.addAll(e.getValue());
+				res.put(e.getKey(), list);
+			});
+		}
+	}
+
+
 }

@@ -20,6 +20,7 @@ import java.util.Map;
 public class GeoCITObject extends BaseCITObject {
 	private static final long serialVersionUID = 6311645893041504956L;
 
+
 	private double[] location;
 	private Map<String,String> address = null;
 	

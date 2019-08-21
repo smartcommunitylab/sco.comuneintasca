@@ -21,7 +21,8 @@ public class BaseCITObject extends AppObject {
 	private static final long serialVersionUID = 3589900794339644582L;
 
 	private String classifier;
-	
+	private Map<String,String> classification;
+
 	private String source = null;
 	private Map<String,String> title = null;
 	private Map<String,String> shortTitle = null;
@@ -143,4 +144,12 @@ public class BaseCITObject extends AppObject {
 		this.elementType = elementType;
 	}
 
+	public Map<String, String> getClassification() {
+		return classification;
+	}
+
+	public void setClassification(Map<String, String> classification) {
+		this.classification = classification;
+	}
+	
 }

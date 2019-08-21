@@ -24,14 +24,7 @@ public class MainEventObject extends GeoCITObject {
 	private long toDate;
 	
 	private Map<String,String> eventDateDescription;
-	private Map<String,String> classification;
 
-	public Map<String, String> getClassification() {
-		return classification;
-	}
-	public void setClassification(Map<String, String> classification) {
-		this.classification = classification;
-	}
 	public long getFromDate() {
 		return fromDate;
 	}

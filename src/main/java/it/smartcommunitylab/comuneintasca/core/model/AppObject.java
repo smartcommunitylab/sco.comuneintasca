@@ -1,5 +1,8 @@
 package it.smartcommunitylab.comuneintasca.core.model;
 
+import java.util.List;
+import java.util.Map;
+
 import it.smartcommunitylab.comuneintasca.storage.data.BasicObject;
 
 @SuppressWarnings("serial")
@@ -8,6 +11,7 @@ public class AppObject extends BasicObject {
 	private String appId;
 	private Long lastModified = null;
 	private String localId;
+	private Map<String, List<String>> cat;
 
 	public String getAppId() {
 		return appId;
@@ -34,4 +38,11 @@ public class AppObject extends BasicObject {
 		
 		return !lastModified.equals(obj.getLastModified());
 	}
+	public Map<String, List<String>> getCat() {
+		return cat;
+	}
+	public void setCat(Map<String, List<String>> cat) {
+		this.cat = cat;
+	}
+	
 }
