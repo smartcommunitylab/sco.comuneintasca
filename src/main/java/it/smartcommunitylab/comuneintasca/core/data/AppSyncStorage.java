@@ -15,24 +15,18 @@
  ******************************************************************************/
 package it.smartcommunitylab.comuneintasca.core.data;
 
-import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
 
-import javax.annotation.PostConstruct;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.lightcouch.CouchDbClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.geo.Circle;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Component;
 
 import it.smartcommunitylab.comuneintasca.core.model.AppObject;
-import it.smartcommunitylab.comuneintasca.storage.data.BasicObject;
 import it.smartcommunitylab.comuneintasca.storage.data.SyncData;
 import it.smartcommunitylab.comuneintasca.storage.exception.DataException;
 
@@ -58,13 +52,13 @@ public class AppSyncStorage  {
 		publishStorage = new AppSyncSubStorage(mongoTemplate, PUBLISH_COLLECTION);
 	}
 	
-	@PostConstruct
-	public void syncExtrStorage() throws DataException {
-		List<BasicObject> all = publishStorage.getAllObjects();
-		all.forEach(o -> {
-			extraStorage.storeObjectIfMissing((AppObject)o);
-		});
-	}
+//	@PostConstruct
+//	public void syncExtrStorage() throws DataException {
+//		List<BasicObject> all = publishStorage.getAllObjects();
+//		all.forEach(o -> {
+//			extraStorage.storeObjectIfMissing((AppObject)o);
+//		});
+//	}
 
 	public SyncData getSyncAppData(long since, String appId, Map<String, Object> include, Map<String, Object> exclude) throws DataException {
 		return publishStorage.getSyncAppData(since, appId, include, exclude);
