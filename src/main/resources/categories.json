@@ -16,11 +16,26 @@
 			"en": ["Historic Buildings"],
 			"de": ["Historische Geb\u00e4ude"]
 		},
+        "Edificio storico": {
+            "it": ["Edifici storici"],
+            "en": ["Historic Buildings"],
+            "de": ["Historische Geb\u00e4ude"]
+        },
 		"Chiese": {
 			"it": ["Chiese"],
 			"en": ["Churches"],
 			"de": ["Kirchen"]
 		},
+        "chiese": {
+            "it": ["Chiese"],
+            "en": ["Churches"],
+            "de": ["Kirchen"]
+        },
+        "Chiesa": {
+            "it": ["Chiese"],
+            "en": ["Churches"],
+            "de": ["Kirchen"]
+        },
 		"Aree archeologiche": {
 			"it": ["Aree archeologiche"],
 			"en": ["Archaeological Areas"],
@@ -46,12 +61,22 @@
 			"en": ["Other sites of historical and artistic interest"],
 			"de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
 		},
-		"Parcheggi": {
+        "Parcheggi": {
+            "it": ["Parcheggi"],
+            "en": ["Parking"],
+            "de": ["Parkplatz"]
+        },
+        "Farmacie": {
+            "it": ["Farmacie"],
+            "en": ["Pharmacies"],
+            "de": ["Apotheken"]
+        },
+	 	"Parcheggio": {
 			"it": ["Parcheggi"],
 			"en": ["Parking"],
 			"de": ["Parkplatz"]
 		},
-		"Farmacie": {
+		"Farmacia": {
 			"it": ["Farmacie"],
 			"en": ["Pharmacies"],
 			"de": ["Apotheken"]

@@ -136,7 +136,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(Evento source, EventObject target) {
-			return target.getLastModified() < source.getLastModified();
+			return target.getLastModified() < source.getLastModified() || target.getCat() == null;
 		}
 	};
 	public Extractor<I18nRestaurant, RestaurantObject> restaurantExtractor = new Extractor<I18nRestaurant, RestaurantObject>() {
@@ -194,7 +194,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(I18nRestaurant source, RestaurantObject target) {
-			return target.getLastModified() < source.getLastModified();
+			return target.getLastModified() < source.getLastModified() || target.getCat() == null;
 		}
 	};
 	public Extractor<I18nHotel, HotelObject> hotelExtractor = new Extractor<Opendata.I18nHotel, HotelObject>() {
@@ -243,7 +243,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(I18nHotel source, HotelObject target) {
-			return target.getLastModified() < source.getLastModified();
+			return target.getLastModified() < source.getLastModified() || target.getCat() == null;
 		}
 	};
 	public Extractor<I18nCultura, POIObject> poiExtractor = new Extractor<Opendata.I18nCultura, POIObject>() {
@@ -292,7 +292,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(I18nCultura source, POIObject target) {
-			return target.getLastModified() < source.getLastModified();
+			return target.getLastModified() < source.getLastModified() || target.getCat() == null;
 		}
 	};
 	public Extractor<I18nMainEvent, MainEventObject> mainEventExtractor = new Extractor<Opendata.I18nMainEvent, MainEventObject>() {
@@ -344,7 +344,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(I18nMainEvent source, MainEventObject target) {
-			return target.getLastModified() < source.getLastModified();
+			return target.getLastModified() < source.getLastModified() || target.getCat() == null;
 		}
 	};
 	public Extractor<I18nItinerario, ItineraryObject> itineraryExtractor = new Extractor<Opendata.I18nItinerario, ItineraryObject>() {
@@ -430,7 +430,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(I18nTesto source, ContentObject target) {
-			return target.getLastModified() < source.getLastModified();
+			return target.getLastModified() < source.getLastModified() || target.getCat() == null;
 		}
 	};
 	public Extractor<Opendata.I18nCultura, TerritoryServiceObject> territoryServiceExtractor  = new Extractor<Opendata.I18nCultura, TerritoryServiceObject>() {
@@ -479,7 +479,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(I18nCultura source, TerritoryServiceObject target) {
-			return target.getLastModified() < source.getLastModified();
+			return target.getLastModified() < source.getLastModified() || target.getCat() == null;
 		}
 	};
 
@@ -515,7 +515,12 @@ public class DataExtractor {
 	}
 	
 	private Map<String, List<String>> toCat(String type, Map<String, String> map) {
-		return getICategories(type, map.get("it"));
+		Map<String, List<String>> categories = getICategories(type, map.get("it"));
+		if (categories != null) {
+			return categories;
+		}
+		return categories;
+//		return toListMap(map);
 	}
 	
 	private Map<String, List<String>> toListMap(Map<String, String> map) {
