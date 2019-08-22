@@ -36,7 +36,7 @@ public class AppObject extends BasicObject {
 		if (obj == null) return true;
 		if (lastModified == null) return obj.getLastModified() != null;
 		
-		return !lastModified.equals(obj.getLastModified());
+		return !lastModified.equals(obj.getLastModified()) || cat == null && obj.getCat() != null;
 	}
 	public Map<String, List<String>> getCat() {
 		return cat;
