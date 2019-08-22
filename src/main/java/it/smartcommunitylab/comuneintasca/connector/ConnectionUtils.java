@@ -23,6 +23,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
@@ -33,6 +35,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  *
  */
 public class ConnectionUtils {
+	private static final Logger logger = LoggerFactory.getLogger(ConnectionUtils.class);
 
 //	static {
 //		System.setProperty("https.protocols", "TLSv1.1");
@@ -52,9 +55,22 @@ public class ConnectionUtils {
 //			}
 			RestTemplate restTemplate = new RestTemplate();
 			if ("http".equals(urlObj.getProtocol())) {
-				return restTemplate.getForObject(url.replaceFirst("http", "https"), cls);
+				return callRepeat(restTemplate, url.replaceFirst("http", "https"), cls);
+			}
+			return callRepeat(restTemplate, url, cls);
+		}
+	} 
+	
+	private static <T> T callRepeat(RestTemplate restTemplate, String url, Class<T> cls) {
+		try {
+			return restTemplate.getForObject(url, cls);
+		} catch (Exception e) {
+			logger.warn("error retriving url {}, retryung", url);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
 			}
 			return restTemplate.getForObject(url, cls);
 		}
-	} 
+	}
 }
