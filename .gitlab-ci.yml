@@ -9,14 +9,12 @@ stages:
   - deploy
 
 variables:
-  CONTAINER_DEV_IMAGE: smartcommunitylab/trafficestimator_test:$CI_COMMIT_SHORT_SHA
-
-before_script:
-  - docker login -u $DHUB_USER -p $DHUB_PASS
+  CONTAINER_DEV_IMAGE: smartcommunitylab/comuneintasca:$CI_COMMIT_SHORT_SHA
 
 build:
   stage: build
   script:
+    - docker login -u $DHUB_USER -p $DHUB_PASS
     - docker build -t $CONTAINER_DEV_IMAGE .
     - docker push $CONTAINER_DEV_IMAGE
 
@@ -27,7 +25,7 @@ deploy:
     name: develop
   script:
     - echo "deploy"
-    - kubectl -n default set image deployments/trafficestimator-test trafficestimator-test=$CONTAINER_DEV_IMAGE --record=true
-    - kubectl -n default rollout status deployment trafficestimator-test
+    - kubectl -n default set image deployments/comuneintasca comuneintasca=$CONTAINER_DEV_IMAGE --record=true
+    - kubectl -n default rollout status deployment comuneintasca
   only:
     - master
