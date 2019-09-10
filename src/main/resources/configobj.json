@@ -1,21 +1,39 @@
 
 {
   "highlights": [
-      {
-      "id": "d757ee0813bdcc5b6f74044e004226dc",
+    {
+      "id": "d347c18f3a931ae6a512b7d80591afd8",
       "name": {
-        "it": "Livetrento",
-        "en": "Livetrento",
-        "de": "Livetrento"
+        "it": "Come arrivare a Trento",
+        "en": "How to arrive to Trento",
+        "de": "Nach Trient kommen"
       },
       "image": {
-        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867529-1-ita-IT\/Livetrento.jpg",
-        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867534-2-eng-GB\/Livetrento.jpg",
-        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867539-3-ger-DE\/Livetrento.jpg"
+        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622728-36-ita-IT\/Come-arrivare-a-Trento.jpg",
+        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622733-37-eng-GB\/How-to-arrive-to-Trento.jpg",
+        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622738-38-ger-DE\/Nach-Trient-kommen.jpg"
       },
+      "type": "content",
       "objectIds": [
-        "48b624c0fc02e87c43728ca839ae50f5"
+        "4b8834e1c27b237c07faebc96d8dab37"
       ]
+    },
+    {
+        "id": "d757ee0813bdcc5b6f74044e004226dc",
+        "name": {
+          "it": "Trento Smart City Week",
+          "en": "Trento Smart City Week",
+          "de": "Trento Smart City Week"
+        },
+        "image": {
+          "it": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/turismo/eventi/eventi-principali/trento-smart-city-week/9998836-37-ita-IT/Trento-Smart-City-Week_imagefull.jpg",
+          "en": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/turismo/eventi/eventi-principali/trento-smart-city-week/9998836-37-ita-IT/Trento-Smart-City-Week_imagefull.jpg",
+          "de": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/turismo/eventi/eventi-principali/trento-smart-city-week/9998836-37-ita-IT/Trento-Smart-City-Week_imagefull.jpg"
+        },
+        "type": "event",
+        "objectIds": [
+            "a41e85e995c0e17024cb65791b405961"
+        ]  
     },
     {
       "id": "8cc43799380fcd360be1219b9fa6b152",
@@ -29,6 +47,7 @@
         "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622748-11-eng-GB\/Museum-Pass.jpg",
         "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622753-12-ger-DE\/Museum-Pass.jpg"
       },
+      "type": "content",
       "objectIds": [
         "text.3005"
       ]
@@ -45,24 +64,9 @@
         "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554678\/1-eng-GB\/Muse1.jpg",
         "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/in-evidenza\/muse\/8554683-2-ger-DE\/Muse.jpg"
       },
+      "type": "poi",
       "objectIds": [
         "cultura.72"
-      ]
-    },
-    {
-      "id": "d347c18f3a931ae6a512b7d80591afd8",
-      "name": {
-        "it": "Come arrivare a Trento",
-        "en": "How to arrive to Trento",
-        "de": "Nach Trient kommen"
-      },
-      "image": {
-        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622728-36-ita-IT\/Come-arrivare-a-Trento.jpg",
-        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622733-37-eng-GB\/How-to-arrive-to-Trento.jpg",
-        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622738-38-ger-DE\/Nach-Trient-kommen.jpg"
-      },
-      "objectIds": [
-        "4b8834e1c27b237c07faebc96d8dab37"
       ]
     }
   ],
