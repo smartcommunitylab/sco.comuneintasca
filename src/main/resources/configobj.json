@@ -53,6 +53,23 @@
       ]
     },
     {
+      "id": "profile_cit_la_mia_trento",
+      "name": {
+        "it": "Conosci la mia Trento",
+        "en": "Conosci la mia Trento",
+        "de": "Conosci la mia Trento"
+      },
+      "image": {
+        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/vivi-la-citta\/eventi-in-citta\/conosci-la-mia-trento\/11848031-1-ita-IT\/Conosci-la-mia-Trento_imagefull.png",
+        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/vivi-la-citta\/eventi-in-citta\/conosci-la-mia-trento\/11848031-1-ita-IT\/Conosci-la-mia-Trento_imagefull.png",
+        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/vivi-la-citta\/eventi-in-citta\/conosci-la-mia-trento\/11848031-1-ita-IT\/Conosci-la-mia-Trento_imagefull.png"
+      },
+      "type": "event",
+      "objectIds": [
+        "5cbeeced646ccae1b373293c1305ed10"
+      ]
+    },
+    {
       "id": "profile_cit_405be9ac05df567b4c87b4d31119e52e",
       "name": {
         "it": "Muse",
