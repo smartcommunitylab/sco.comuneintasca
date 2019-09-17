@@ -36,23 +36,6 @@
         ]  
     },
     {
-      "id": "8cc43799380fcd360be1219b9fa6b152",
-      "name": {
-        "it": "Museum Pass",
-        "en": "Museum Pass",
-        "de": "Museum Pass"
-      },
-      "image": {
-        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622743-10-ita-IT\/Museum-Pass.jpg",
-        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622748-11-eng-GB\/Museum-Pass.jpg",
-        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622753-12-ger-DE\/Museum-Pass.jpg"
-      },
-      "type": "content",
-      "objectIds": [
-        "text.3005"
-      ]
-    },
-    {
       "id": "profile_cit_la_mia_trento",
       "name": {
         "it": "Conosci la mia Trento",
@@ -70,6 +53,23 @@
       ]
     },
     {
+      "id": "8cc43799380fcd360be1219b9fa6b152",
+      "name": {
+        "it": "Museum Pass",
+        "en": "Museum Pass",
+        "de": "Museum Pass"
+      },
+      "image": {
+        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622743-10-ita-IT\/Museum-Pass.jpg",
+        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622748-11-eng-GB\/Museum-Pass.jpg",
+        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622753-12-ger-DE\/Museum-Pass.jpg"
+      },
+      "type": "content",
+      "objectIds": [
+        "text.3005"
+      ]
+    },
+    {
       "id": "profile_cit_405be9ac05df567b4c87b4d31119e52e",
       "name": {
         "it": "Muse",
@@ -80,23 +80,6 @@
         "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554673\/1-ita-IT\/Muse1.jpg",
         "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554678\/1-eng-GB\/Muse1.jpg",
         "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/in-evidenza\/muse\/8554683-2-ger-DE\/Muse.jpg"
-      },
-      "type": "poi",
-      "objectIds": [
-        "cultura.72"
-      ]
-    },
-    {
-      "id": "profile_cit_lamiatrento",
-      "name": {
-        "it": "La nuova App la mia Trento",
-        "en": "La nuova App la mia Trento",
-        "de": "La nuova App la mia Trento"
-      },
-      "image": {
-        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554673\/1-ita-IT\/Muse1.jpg",
-        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554678\/1-eng-GB\/Muse1.jpg",
-        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/in-evidenza\/muse\/8554683-2-ger-DE\/Muse.jpg"
       },
       "type": "poi",
       "objectIds": [
