@@ -43,6 +43,8 @@ public class MenuItem {
 	private Map<String,String> app;
 	private String elementType;
 	
+	private String uri;
+	
 	public String getId() {
 		return id;
 	}
@@ -130,5 +132,13 @@ public class MenuItem {
 	public void setElementType(String elementType) {
 		this.elementType = elementType;
 	}
-
+	public String getUri() {
+		if (uri == null) {
+			uri = TypeConstants.getTypeUri(type);
+		}
+		return uri;
+	}
+	public void setUri(String uri) {
+		this.uri = uri;
+	}
 }
