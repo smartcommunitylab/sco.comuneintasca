@@ -391,7 +391,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(I18nItinerario source, ItineraryObject target) {
-			return true; // target.getLastModified() < source.getLastModified() || source.getClassification() != null && source.getClassification().getIt() != null && target.getTracciato() == null;
+			return target.getLastModified() < source.getLastModified();
 		}
 	};
 	public Extractor<I18nTesto, ContentObject> contentExtractor = new Extractor<Opendata.I18nTesto, ContentObject>() {
