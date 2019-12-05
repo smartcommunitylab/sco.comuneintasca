@@ -47,7 +47,7 @@
         "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/percorsi\/itinerario-storico-e-spirituale-di-chiara-lubich\/12003741-16-ita-IT\/Itinerario-storico-e-spirituale-di-Chiara-Lubich.png",
         "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/percorsi\/itinerario-storico-e-spirituale-di-chiara-lubich\/12003741-16-ita-IT\/Itinerario-storico-e-spirituale-di-Chiara-Lubich.png"
       },
-      "type": "content",
+      "type": "itineraries",
       "objectIds": [
         "b6f8273d2e0ea1238350a082ffcb35e7"
       ]
@@ -64,7 +64,7 @@
         "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/come-orientarsi\/parcheggi\/parcheggi-supplementari-festivita-natalizie\/11387472-3-ita-IT\/Parcheggi-supplementari-festivita-natalizie.png",
         "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/come-orientarsi\/parcheggi\/parcheggi-supplementari-festivita-natalizie\/11387472-3-ita-IT\/Parcheggi-supplementari-festivita-natalizie.png"
       },
-      "type": "poi",
+      "type": "content",
       "objectIds": [
         "b1fb114437661550f50d5bb6850e4209"
       ]
