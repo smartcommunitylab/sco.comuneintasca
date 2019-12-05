@@ -133,7 +133,7 @@ public class MenuItem {
 		this.elementType = elementType;
 	}
 	public String getUri() {
-		if (uri == null) {
+		if (uri == null && type != null) {
 			uri = TypeConstants.getTypeUri(type);
 		}
 		return uri;
