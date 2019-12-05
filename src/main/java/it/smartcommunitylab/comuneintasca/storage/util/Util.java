@@ -15,6 +15,7 @@
  ******************************************************************************/
 package it.smartcommunitylab.comuneintasca.storage.util;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -99,4 +100,14 @@ public class Util {
     	if (res.getUpdateTime() <= 0) res.setUpdateTime(bean.getUpdateTime()); 
     	return res;
     }
+	
+	public static String extractContentFromURL(String url) {
+		try {
+			return it.smartcommunitylab.comuneintasca.connector.ConnectionUtils.call(url, String.class);
+		} catch (IOException e) {
+			return null;
+		}
+	}
+
+
 }

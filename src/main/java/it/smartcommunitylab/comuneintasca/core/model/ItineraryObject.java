@@ -25,6 +25,7 @@ public class ItineraryObject extends BaseCITObject {
 	private Integer length;
 	private Integer duration;
 	private Map<String,String> difficulty;
+	private String tracciato;
 	
 	private List<String> stepLines;
 	
@@ -58,11 +59,16 @@ public class ItineraryObject extends BaseCITObject {
 	public void setStepLines(List<String> stepLines) {
 		this.stepLines = stepLines;
 	}
-	
-	
+
 	@Override
 	public String getElementType() {
 		return "itinerary-item";
+	}
+	public String getTracciato() {
+		return tracciato;
+	}
+	public void setTracciato(String tracciato) {
+		this.tracciato = tracciato;
 	}
 
 }

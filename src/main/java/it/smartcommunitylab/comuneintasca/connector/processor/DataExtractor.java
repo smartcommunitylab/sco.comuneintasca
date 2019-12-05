@@ -39,6 +39,7 @@ import it.smartcommunitylab.comuneintasca.core.model.POIObject;
 import it.smartcommunitylab.comuneintasca.core.model.RestaurantObject;
 import it.smartcommunitylab.comuneintasca.core.model.TerritoryServiceObject;
 import it.smartcommunitylab.comuneintasca.core.model.TypeConstants;
+import it.smartcommunitylab.comuneintasca.storage.util.Util;
 
 /**
  * Convert data to the internal format
@@ -375,6 +376,11 @@ public class DataExtractor {
 			no.setDuration(bt.getDuration());
 			no.setLength(bt.getLength());
 			no.setObjectId(bt.getObjectId());
+			
+			// workaround for 'tracciato': use classification for storing ref to tracciato
+			if (bt.getClassification() != null && bt.getClassification().getIt() != null) {
+				no.setTracciato(Util.extractContentFromURL(bt.getClassification().getIt()));
+			}
 			return no;
 		}
 
@@ -385,7 +391,7 @@ public class DataExtractor {
 
 		@Override
 		public boolean isNewer(I18nItinerario source, ItineraryObject target) {
-			return target.getLastModified() < source.getLastModified();
+			return target.getLastModified() < source.getLastModified() || source.getClassification() != null && source.getClassification().getIt() != null && target.getTracciato() == null;
 		}
 	};
 	public Extractor<I18nTesto, ContentObject> contentExtractor = new Extractor<Opendata.I18nTesto, ContentObject>() {

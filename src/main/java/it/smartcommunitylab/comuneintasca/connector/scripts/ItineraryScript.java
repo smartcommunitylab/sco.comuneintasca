@@ -22,6 +22,7 @@ import java.util.Map;
 import com.google.protobuf.Message;
 
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nItinerario;
+import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nString;
 
 public class ItineraryScript extends OpenContentScript {
 
@@ -75,8 +76,15 @@ public class ItineraryScript extends OpenContentScript {
 		
 		builder.setDifficulty(getI18NStringValue(i18n, FIELDS, "difficolta", STRING_VALUE));
 
-
-		
+		Object tracciato = getRecValue(getMap(i18n,DEFAULT_LANGUAGE), FIELDS, "tracciato", VALUE);
+		if (tracciato != null && tracciato instanceof String) {
+			try {
+				I18nString.Builder sb = I18nString.newBuilder();
+				sb.setIt(tracciato.toString());
+				builder.setClassification(sb.build());
+			} catch (Exception e) {
+			}
+		}		
 
 		return builder.build();
 	}

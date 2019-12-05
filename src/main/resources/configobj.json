@@ -2,38 +2,21 @@
 {
   "highlights": [
     {
-      "id": "d347c18f3a931ae6a512b7d80591afd8",
+      "id": "natale",
       "name": {
-        "it": "Come arrivare a Trento",
-        "en": "How to arrive to Trento",
-        "de": "Nach Trient kommen"
+        "it": "Trento, città del Natale\" e il Mercatino di Natale",
+        "en": "Trento, città del Natale\" e il Mercatino di Natale",
+        "de": "Trento, città del Natale\" e il Mercatino di Natale"
       },
       "image": {
-        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622728-36-ita-IT\/Come-arrivare-a-Trento.jpg",
-        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622733-37-eng-GB\/How-to-arrive-to-Trento.jpg",
-        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622738-38-ger-DE\/Nach-Trient-kommen.jpg"
+        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/eventi-principali\/trento-citta-del-natale-e-il-mercatino-di-natale\/8532983-37-ita-IT\/Trento-citta-del-Natale-e-il-Mercatino-di-Natale.png",
+        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/eventi-principali\/trento-citta-del-natale-e-il-mercatino-di-natale\/8532983-37-ita-IT\/Trento-citta-del-Natale-e-il-Mercatino-di-Natale.png",
+        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/eventi-principali\/trento-citta-del-natale-e-il-mercatino-di-natale\/8532983-37-ita-IT\/Trento-citta-del-Natale-e-il-Mercatino-di-Natale.png"
       },
       "type": "content",
       "objectIds": [
-        "4b8834e1c27b237c07faebc96d8dab37"
+        "event.major.11"
       ]
-    },
-    {
-        "id": "d757ee0813bdcc5b6f74044e004226dc",
-        "name": {
-          "it": "Trento Smart City Week",
-          "en": "Trento Smart City Week",
-          "de": "Trento Smart City Week"
-        },
-        "image": {
-          "it": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/turismo/eventi/eventi-principali/trento-smart-city-week/9998836-37-ita-IT/Trento-Smart-City-Week_imagefull.jpg",
-          "en": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/turismo/eventi/eventi-principali/trento-smart-city-week/9998836-37-ita-IT/Trento-Smart-City-Week_imagefull.jpg",
-          "de": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/turismo/eventi/eventi-principali/trento-smart-city-week/9998836-37-ita-IT/Trento-Smart-City-Week_imagefull.jpg"
-        },
-        "type": "event",
-        "objectIds": [
-            "a41e85e995c0e17024cb65791b405961"
-        ]  
     },
     {
       "id": "8cc43799380fcd360be1219b9fa6b152",
@@ -53,20 +36,37 @@
       ]
     },
     {
-      "id": "profile_cit_405be9ac05df567b4c87b4d31119e52e",
+      "id": "b6f8273d2e0ea1238350a082ffcb35e7",
       "name": {
-        "it": "Muse",
-        "en": "Muse",
-        "de": "Muse"
+        "it": "Itinerario storico e spirituale di Chiara Lubich",
+        "en": "Historical and spiritual itinerary of Chiara Lubich",
+        "de": "Itinerario storico e spirituale di Chiara Lubich"
       },
       "image": {
-        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554673\/1-ita-IT\/Muse1.jpg",
-        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554678\/1-eng-GB\/Muse1.jpg",
-        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/in-evidenza\/muse\/8554683-2-ger-DE\/Muse.jpg"
+        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622743-10-ita-IT\/Museum-Pass.jpg",
+        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622748-11-eng-GB\/Museum-Pass.jpg",
+        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622753-12-ger-DE\/Museum-Pass.jpg"
+      },
+      "type": "content",
+      "objectIds": [
+        "b6f8273d2e0ea1238350a082ffcb35e7"
+      ]
+    },
+    {
+      "id": "parcheggi_natalizie",
+      "name": {
+        "it": "Parcheggi supplementari festività natalizie",
+        "en": "Parcheggi supplementari festività natalizie",
+        "de": "Parcheggi supplementari festività natalizie"
+      },
+      "image": {
+        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/come-orientarsi\/parcheggi\/parcheggi-supplementari-festivita-natalizie\/11387472-3-ita-IT\/Parcheggi-supplementari-festivita-natalizie.png",
+        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/come-orientarsi\/parcheggi\/parcheggi-supplementari-festivita-natalizie\/11387472-3-ita-IT\/Parcheggi-supplementari-festivita-natalizie.png",
+        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/come-orientarsi\/parcheggi\/parcheggi-supplementari-festivita-natalizie\/11387472-3-ita-IT\/Parcheggi-supplementari-festivita-natalizie.png"
       },
       "type": "poi",
       "objectIds": [
-        "cultura.72"
+        "b1fb114437661550f50d5bb6850e4209"
       ]
     }
   ],
