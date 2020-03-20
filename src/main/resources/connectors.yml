@@ -22,7 +22,7 @@ apps:
           imagePath: http://www.comune.trento.it/
           autoPublish: true
           
-                  - type: it.smartcommunitylab.comuneintasca.core.model.MainEventObject
+        - type: it.smartcommunitylab.comuneintasca.core.model.MainEventObject
           url: http://www.comune.trento.it/api/opendata/v1/content/class/iniziativa/offset/0/limit/1000
           serviceId: smartcampus.service.opendata
           methodName: it.smartcommunitylab.comuneintasca.connector.flows.MainEventsFlow
