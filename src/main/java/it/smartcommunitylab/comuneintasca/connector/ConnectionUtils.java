@@ -21,10 +21,13 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.client.ClientHttpRequestFactory;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
@@ -53,13 +56,22 @@ public class ConnectionUtils {
 //			} catch (Exception e) {
 //				e.printStackTrace();
 //			}
-			RestTemplate restTemplate = new RestTemplate();
+			RestTemplate restTemplate = getRestTemplate();
 			if ("http".equals(urlObj.getProtocol())) {
 				return callRepeat(restTemplate, url.replaceFirst("http", "https"), cls);
 			}
 			return callRepeat(restTemplate, url, cls);
 		}
 	} 
+	
+	public static RestTemplate getRestTemplate() {
+
+		SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+
+        factory.setConnectTimeout(20000);
+        factory.setReadTimeout(20000);
+	    return new RestTemplate(factory);
+	}
 	
 	private static <T> T callRepeat(RestTemplate restTemplate, String url, Class<T> cls) {
 		try {
