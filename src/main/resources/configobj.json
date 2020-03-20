@@ -2,37 +2,20 @@
 {
   "highlights": [
     {
-      "id": "natale",
-      "name": {
-        "it": "Trento, città del Natale\" e il Mercatino di Natale",
-        "en": "Trento, città del Natale\" e il Mercatino di Natale",
-        "de": "Trento, città del Natale\" e il Mercatino di Natale"
-      },
-      "image": {
-        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/eventi-principali\/trento-citta-del-natale-e-il-mercatino-di-natale\/8532983-37-ita-IT\/Trento-citta-del-Natale-e-il-Mercatino-di-Natale.png",
-        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/eventi-principali\/trento-citta-del-natale-e-il-mercatino-di-natale\/8532983-37-ita-IT\/Trento-citta-del-Natale-e-il-Mercatino-di-Natale.png",
-        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/eventi-principali\/trento-citta-del-natale-e-il-mercatino-di-natale\/8532983-37-ita-IT\/Trento-citta-del-Natale-e-il-Mercatino-di-Natale.png"
-      },
-      "type": "content",
-      "objectIds": [
-        "event.major.11"
-      ]
-    },
-    {
       "id": "8cc43799380fcd360be1219b9fa6b152",
       "name": {
-        "it": "Museum Pass",
-        "en": "Museum Pass",
-        "de": "Museum Pass"
+        "it": "Coronavirus: tutti gli aggiornamenti",
+        "en": "Coronavirus: tutti gli aggiornamenti",
+        "de": "Coronavirus: tutti gli aggiornamenti"
       },
       "image": {
-        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622743-10-ita-IT\/Museum-Pass.jpg",
-        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622748-11-eng-GB\/Museum-Pass.jpg",
-        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622753-12-ger-DE\/Museum-Pass.jpg"
+        "it": "https://www.comune.trento.it/var/comunetn/storage/images/comunicazione/il-comune-informa/ufficio-stampa/coronavirus-tutti-gli-aggiornamenti/numeri-utili/12190815-1-ita-IT/Numeri-utili_imagefullwide.jpg",
+        "en": "https://www.comune.trento.it/var/comunetn/storage/images/comunicazione/il-comune-informa/ufficio-stampa/coronavirus-tutti-gli-aggiornamenti/numeri-utili/12190815-1-ita-IT/Numeri-utili_imagefullwide.jpg",
+        "de": "https://www.comune.trento.it/var/comunetn/storage/images/comunicazione/il-comune-informa/ufficio-stampa/coronavirus-tutti-gli-aggiornamenti/numeri-utili/12190815-1-ita-IT/Numeri-utili_imagefullwide.jpg"
       },
       "type": "content",
       "objectIds": [
-        "text.3005"
+        "f238baba7fa65d3b5a5cf703e7c1aea0"
       ]
     },
     {
@@ -50,23 +33,6 @@
       "type": "itineraries",
       "objectIds": [
         "b6f8273d2e0ea1238350a082ffcb35e7"
-      ]
-    },
-    {
-      "id": "parcheggi_natalizie",
-      "name": {
-        "it": "Parcheggi supplementari festività natalizie",
-        "en": "Parcheggi supplementari festività natalizie",
-        "de": "Parcheggi supplementari festività natalizie"
-      },
-      "image": {
-        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/come-orientarsi\/parcheggi\/parcheggi-supplementari-festivita-natalizie\/11387472-3-ita-IT\/Parcheggi-supplementari-festivita-natalizie.png",
-        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/come-orientarsi\/parcheggi\/parcheggi-supplementari-festivita-natalizie\/11387472-3-ita-IT\/Parcheggi-supplementari-festivita-natalizie.png",
-        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/citta\/come-orientarsi\/parcheggi\/parcheggi-supplementari-festivita-natalizie\/11387472-3-ita-IT\/Parcheggi-supplementari-festivita-natalizie.png"
-      },
-      "type": "content",
-      "objectIds": [
-        "b1fb114437661550f50d5bb6850e4209"
       ]
     }
   ],
