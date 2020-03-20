@@ -29,6 +29,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.StringUtils;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -74,15 +75,23 @@ public class ConnectionUtils {
 	}
 	
 	private static <T> T callRepeat(RestTemplate restTemplate, String url, Class<T> cls) {
+		for (int i = 0; i < 3; i++) {
+			try {
+				return restTemplate.getForObject(url, cls);
+			} catch (Exception e) {
+				logger.warn("error retriving url {}, retryung", url);
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+				}
+			} 
+		}
 		try {
 			return restTemplate.getForObject(url, cls);
-		} catch (Exception e) {
-			logger.warn("error retriving url {}, retryung", url);
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e1) {
-			}
-			return restTemplate.getForObject(url, cls);
+		} catch (RestClientException e1) {
+			logger.warn("error retriving url {}, terminating", url);
+			throw e1;
 		}
+
 	}
 }
