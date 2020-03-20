@@ -182,6 +182,15 @@ public class OpenContentScript {
 		return builder.build();
 	}
 	
+	protected I18nString emptyI18NStringValue() {
+		I18nString.Builder builder = I18nString.newBuilder();
+		
+		builder.setIt("");
+		builder.setEn("");
+		builder.setDe("");
+		return builder.build();
+	}
+	
 	protected String asString(Object o) {
 		if (o instanceof List || o instanceof Set) {
 			return o.toString().replace("[", "").replace("]", "");

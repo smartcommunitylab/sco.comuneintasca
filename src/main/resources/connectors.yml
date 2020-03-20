@@ -43,12 +43,12 @@ apps:
           imagePath: http://www.comune.trento.it/
           autoPublish: true
           
-        - type: it.smartcommunitylab.comuneintasca.core.model.RestaurantObject
-          url: http://www.comune.trento.it/api/opendata/v1/content/class/ristorante/offset/0/limit/1000
-          serviceId: smartcampus.service.opendata
-          methodName: it.smartcommunitylab.comuneintasca.connector.flows.RestaurantsFlow
-          imagePath: http://www.comune.trento.it/
-          autoPublish: true
+#        - type: it.smartcommunitylab.comuneintasca.core.model.RestaurantObject
+#          url: http://www.comune.trento.it/api/opendata/v1/content/class/ristorante/offset/0/limit/1000
+#          serviceId: smartcampus.service.opendata
+#          methodName: it.smartcommunitylab.comuneintasca.connector.flows.RestaurantsFlow
+#          imagePath: http://www.comune.trento.it/
+#          autoPublish: true
           
         - type: it.smartcommunitylab.comuneintasca.core.model.HotelObject
           url: http://www.comune.trento.it/api/opendata/v1/content/class/accomodation/offset/0/limit/1000

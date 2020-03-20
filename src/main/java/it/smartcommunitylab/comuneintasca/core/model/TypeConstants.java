@@ -40,7 +40,7 @@ public class TypeConstants {
 	}
 	
 	public static String getTypeUri(String type) {
-		return uriMap.getOrDefault(type, "/detail-poi");
+		return uriMap.getOrDefault(type, "/detail-comune");
 	}
 
 	
