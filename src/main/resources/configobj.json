@@ -2,11 +2,28 @@
 {
   "highlights": [
     {
-      "id": "8cc43799380fcd360be1219b9fa6b152",
+      "id": "d78c91c5884e92202361614f135e571a",
       "name": {
         "it": "Coronavirus: tutti gli aggiornamenti",
         "en": "Coronavirus: tutti gli aggiornamenti",
         "de": "Coronavirus: tutti gli aggiornamenti"
+      },
+      "image": {
+        "it": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/urp-punto-di-riferimento-per-i-cittadini/12197925-1-ita-IT/URP-punto-di-riferimento-per-i-cittadini_imagefull.jpg",
+        "en": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/urp-punto-di-riferimento-per-i-cittadini/12197925-1-ita-IT/URP-punto-di-riferimento-per-i-cittadini_imagefull.jpg",
+        "de": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/urp-punto-di-riferimento-per-i-cittadini/12197925-1-ita-IT/URP-punto-di-riferimento-per-i-cittadini_imagefull.jpg"
+      },
+      "type": "content",
+      "objectIds": [
+        "d78c91c5884e92202361614f135e571a"
+      ]
+    },
+    {
+      "id": "f238baba7fa65d3b5a5cf703e7c1aea0",
+      "name": {
+        "it": "Aggiornamenti Coronavirus",
+        "en": "Aggiornamenti Coronavirus",
+        "de": "Aggiornamenti Coronavirus"
       },
       "image": {
         "it": "https://www.comune.trento.it/var/comunetn/storage/images/comunicazione/il-comune-informa/ufficio-stampa/coronavirus-tutti-gli-aggiornamenti/numeri-utili/12190815-1-ita-IT/Numeri-utili_imagefullwide.jpg",
@@ -19,20 +36,20 @@
       ]
     },
     {
-      "id": "b6f8273d2e0ea1238350a082ffcb35e7",
+      "id": "9b8e70e9c0d3fe3a5b2bd7c8c619b99b",
       "name": {
-        "it": "Itinerario storico e spirituale di Chiara Lubich",
-        "en": "Historical and spiritual itinerary of Chiara Lubich",
-        "de": "Itinerario storico e spirituale di Chiara Lubich"
+        "it": "Coronavirus - 10 comportamenti da seguire",
+        "en": "Coronavirus - 10 comportamenti da seguire",
+        "de": "Coronavirus - 10 comportamenti da seguire"
       },
       "image": {
-        "it": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/percorsi\/itinerario-storico-e-spirituale-di-chiara-lubich\/12003741-16-ita-IT\/Itinerario-storico-e-spirituale-di-Chiara-Lubich.png",
-        "en": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/percorsi\/itinerario-storico-e-spirituale-di-chiara-lubich\/12003741-16-ita-IT\/Itinerario-storico-e-spirituale-di-Chiara-Lubich.png",
-        "de": "https:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/percorsi\/itinerario-storico-e-spirituale-di-chiara-lubich\/12003741-16-ita-IT\/Itinerario-storico-e-spirituale-di-Chiara-Lubich.png"
+        "it": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-dieci-comportamenti-da-seguire/12197938-1-ita-IT/Coronavirus-dieci-comportamenti-da-seguire_imagefull.png",
+        "en": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-dieci-comportamenti-da-seguire/12197938-1-ita-IT/Coronavirus-dieci-comportamenti-da-seguire_imagefull.png",
+        "de": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-dieci-comportamenti-da-seguire/12197938-1-ita-IT/Coronavirus-dieci-comportamenti-da-seguire_imagefull.png"
       },
-      "type": "itineraries",
+      "type": "content",
       "objectIds": [
-        "b6f8273d2e0ea1238350a082ffcb35e7"
+        "9b8e70e9c0d3fe3a5b2bd7c8c619b99b"
       ]
     }
   ],
