@@ -58,6 +58,7 @@ public class ConnectionUtils {
 //				e.printStackTrace();
 //			}
 			RestTemplate restTemplate = getRestTemplate();
+			
 			if ("http".equals(urlObj.getProtocol())) {
 				return callRepeat(restTemplate, url.replaceFirst("http", "https"), cls);
 			}
@@ -75,8 +76,13 @@ public class ConnectionUtils {
 	}
 	
 	private static <T> T callRepeat(RestTemplate restTemplate, String url, Class<T> cls) {
+		logger.info("retriving url {}", url);
 		for (int i = 0; i < 3; i++) {
 			try {
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e1) {
+				}				
 				return restTemplate.getForObject(url, cls);
 			} catch (Exception e) {
 				logger.warn("error retriving url {}, retryung", url);

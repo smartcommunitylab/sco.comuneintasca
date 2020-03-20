@@ -15,6 +15,13 @@ apps:
           imagePath: http://www.comune.trento.it/
           autoPublish: true
           
+        - type: it.smartcommunitylab.comuneintasca.core.model.ContentObject
+          url: http://www.comune.trento.it/api/opendata/v1/content/class/folder/offset/0/limit/1000
+          serviceId: smartcampus.service.opendata
+          methodName: it.smartcommunitylab.comuneintasca.connector.flows.TextsFlow
+          imagePath: http://www.comune.trento.it/
+          autoPublish: true
+          
         - type: it.smartcommunitylab.comuneintasca.core.model.RestaurantObject
           url: http://www.comune.trento.it/api/opendata/v1/content/class/ristorante/offset/0/limit/1000
           serviceId: smartcampus.service.opendata
@@ -40,13 +47,6 @@ apps:
           url: http://www.comune.trento.it/api/opendata/v1/content/class/luogo/offset/0/limit/1000
           serviceId: smartcampus.service.opendata
           methodName: it.smartcommunitylab.comuneintasca.connector.flows.CulturaFlow
-          imagePath: http://www.comune.trento.it/
-          autoPublish: true
-          
-        - type: it.smartcommunitylab.comuneintasca.core.model.ContentObject
-          url: http://www.comune.trento.it/api/opendata/v1/content/class/folder/offset/0/limit/1000
-          serviceId: smartcampus.service.opendata
-          methodName: it.smartcommunitylab.comuneintasca.connector.flows.TextsFlow
           imagePath: http://www.comune.trento.it/
           autoPublish: true
           
