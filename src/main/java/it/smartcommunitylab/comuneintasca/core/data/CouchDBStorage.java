@@ -56,22 +56,23 @@ public class CouchDBStorage {
 	@PostConstruct
 	public void initDB() {
 		db = new CouchDbClient(dbName, true, dbProtocol, dbHost, dbPort, dbUser, dbPassword);
-		
+		List<HashMap> old = db.findDocs("{\"selector\": { \"elementType\": \"gallery-item\"}}", HashMap.class);
+		old.forEach(o -> db.remove(o));
 	}
 	
 	
 	public <T extends AppObject> void storeObject(T ob) {
-		if (ob instanceof DynamicConfigObject) {
-			DynamicConfigObject conf = (DynamicConfigObject) ob;
-			List<MenuItem> highlights = conf.getHighlights();
-			List<HashMap> old = db.findDocs("{\"selector\": { \"elementType\": \"gallery-item\"}}", HashMap.class);
-			old.forEach(o -> db.remove(o));
+//		if (ob instanceof DynamicConfigObject) {
+//			DynamicConfigObject conf = (DynamicConfigObject) ob;
+//			List<MenuItem> highlights = conf.getHighlights();
+//			List<HashMap> old = db.findDocs("{\"selector\": { \"elementType\": \"gallery-item\"}}", HashMap.class);
+//			old.forEach(o -> db.remove(o));
 //			highlights.forEach(h -> {
 //				h.setElementType("gallery-item");
 //				db.save(h);
 //			});
-			
-		}
+//			
+//		}
 		List<HashMap> docs = db.findDocs("{\"selector\": { \"id\": \""+ob.getId()+"\", \"appId\":\""+ob.getAppId()+"\"}}", HashMap.class);
 		if (docs != null && docs.size() > 0) {
 			String _id = (String) docs.get(0).get("_id");
