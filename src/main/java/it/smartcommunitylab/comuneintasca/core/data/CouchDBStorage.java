@@ -66,10 +66,10 @@ public class CouchDBStorage {
 			List<MenuItem> highlights = conf.getHighlights();
 			List<HashMap> old = db.findDocs("{\"selector\": { \"elementType\": \"gallery-item\"}}", HashMap.class);
 			old.forEach(o -> db.remove(o));
-			highlights.forEach(h -> {
-				h.setElementType("gallery-item");
-				db.save(h);
-			});
+//			highlights.forEach(h -> {
+//				h.setElementType("gallery-item");
+//				db.save(h);
+//			});
 			
 		}
 		List<HashMap> docs = db.findDocs("{\"selector\": { \"id\": \""+ob.getId()+"\", \"appId\":\""+ob.getAppId()+"\"}}", HashMap.class);
