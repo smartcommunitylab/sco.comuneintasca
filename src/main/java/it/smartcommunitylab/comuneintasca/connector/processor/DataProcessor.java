@@ -188,7 +188,7 @@ public class DataProcessor  {
 				} else if (applies) {
 					dataService.upsertObject(o, app.getId());
 					SourceEntry entry = app.findEntryByType(o.getClass().getName(), ((BaseCITObject) o).getClassifier());
-					if (entry.isAutoPublish()) {
+					if (entry != null && entry.isAutoPublish()) {
 						dataService.publishObject(o, app.getId()); 
 					}
 				}
