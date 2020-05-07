@@ -21,15 +21,18 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.Duration;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.StringUtils;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,8 +42,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  *
  */
 public class ConnectionUtils {
+	/**
+	 * 
+	 */
+	private static final int TIMEOUT = 5000;
+
 	private static final Logger logger = LoggerFactory.getLogger(ConnectionUtils.class);
 
+	private static final ExecutorService executor = Executors.newSingleThreadExecutor(); 
+	
 //	static {
 //		System.setProperty("https.protocols", "TLSv1.1");
 //	}
@@ -71,21 +81,21 @@ public class ConnectionUtils {
 		SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
 
         factory.setConnectTimeout(5000);
-        factory.setReadTimeout(5000);
+        factory.setReadTimeout(TIMEOUT);
 	    return new RestTemplate(factory);
 	}
 	
 	private static <T> T callRepeat(RestTemplate restTemplate, String url, Class<T> cls) {
-		logger.info("retriving url {}", url);
+		logger.info("retriving url {} ...", url);
 		for (int i = 0; i < 3; i++) {
 			try {
 				try {
 					Thread.sleep(100);
 				} catch (InterruptedException e1) {
 				}				
-				return restTemplate.getForObject(url, cls);
+				return invokeTemplate(restTemplate, url, cls);
 			} catch (Exception e) {
-				logger.warn("error retriving url {}, retryung", url);
+				logger.warn("error retriving url {}, retryung ...", url);
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e1) {
@@ -93,11 +103,23 @@ public class ConnectionUtils {
 			} 
 		}
 		try {
-			return restTemplate.getForObject(url, cls);
-		} catch (RestClientException e1) {
+			return invokeTemplate(restTemplate, url, cls);
+		} catch (Exception e1) {
 			logger.warn("error retriving url {}, terminating", url);
-			throw e1;
+			throw new RuntimeException(e1.getMessage());
 		}
+	}
 
+	private static <T> T invokeTemplate(RestTemplate restTemplate, String url, Class<T> cls) throws InterruptedException, ExecutionException {
+		List<Future<T>> invokeAll = executor.invokeAll(Collections.singletonList(() -> {
+			return restTemplate.getForObject(url, cls);
+		}), 5000, TimeUnit.MILLISECONDS);
+		Future<T> f = invokeAll.get(0);
+		if (f.isCancelled()) {
+			throw new InterruptedException("Failed to retrieve");
+		}
+		logger.info("... done");
+		return f.get();
 	}
 }
+
