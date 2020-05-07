@@ -68,4 +68,8 @@ public class AppManager {
 			s.process();
 		}
 	}
+	
+	public Subscriber getSubscriber(String appId) {
+		return subscriberMap.get(appId);
+	}
 }

@@ -8,6 +8,7 @@ public class SourceEntry {
 	private String serviceId;
 	private String methodName;
 	private boolean autoPublish;
+	private boolean manual;
 	private String imagePath;
 	
 	public String getType() {
@@ -58,11 +59,18 @@ public class SourceEntry {
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
 	}
+	
 	@Override
 	public String toString() {
 		return "SourceEntry [serviceId=" + serviceId + ", methodName="
 				+ methodName + ", type=" + type + ", classifier=" + classifier
 				+ "]";
+	}
+	public boolean isManual() {
+		return manual;
+	}
+	public void setManual(boolean manual) {
+		this.manual = manual;
 	}
 	
 	

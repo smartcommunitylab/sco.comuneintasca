@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import it.smartcommunitylab.comuneintasca.connector.AppManager;
+import it.smartcommunitylab.comuneintasca.connector.Subscriber;
 import it.smartcommunitylab.comuneintasca.core.model.AppObject;
 import it.smartcommunitylab.comuneintasca.core.model.TypeConstants;
 import it.smartcommunitylab.comuneintasca.core.model.app.AppSettings;
@@ -23,7 +25,9 @@ public class ConsoleController {
 	private DataService dataService; 
 	@Autowired
 	private AppSetup appSetup;
-	
+	@Autowired
+	private AppManager appManager;
+
 	@RequestMapping("/")
 	public String home() {
 		return "index";
@@ -54,6 +58,14 @@ public class ConsoleController {
 		dataService.publishApp(getAppId());
 		return getApp();
 	}
+	
+	@RequestMapping(value="/console/trigger/{type}", method=RequestMethod.PUT)
+	public @ResponseBody AppSettings trggerUpdate(@PathVariable String type) throws DataException {
+		Subscriber subscriber = appManager.getSubscriber(getAppId());
+		subscriber.trigger(mapTypeToClass(type), getAppId());
+		return getApp();
+	}
+	
 	@RequestMapping(value="/console/publish/{type}", method=RequestMethod.PUT)
 	public @ResponseBody AppSettings publishAppType(@PathVariable String type) throws DataException {
 		dataService.publishType(mapTypeToClass(type), getAppId(), null);

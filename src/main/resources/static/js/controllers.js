@@ -30,6 +30,17 @@ var consoleControllers = angular.module('consoleControllers', [])
         	$scope.successText = '';
     	});
     };
+    $scope.triggerType = function(type) {
+    	DataService.triggerType(type).then(function(res){
+        	$scope.errorText = '';
+        	$scope.successText = 'Type execution triggered!';
+        	$scope.profile = res;
+    	},
+    	function(e) {
+        	$scope.errorText = 'Failed triggering type';
+        	$scope.successText = '';
+    	});
+    };
     
   }]);
   

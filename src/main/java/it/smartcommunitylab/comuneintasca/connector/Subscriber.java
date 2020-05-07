@@ -42,25 +42,40 @@ public class Subscriber {
 	
 	public void process() {
 		for (SourceEntry source : app.getSources()) {
-			String serviceId = source.getServiceId();
-			String methodName = source.getMethodName();
-			try {
-				Class<?> clazz = Class.forName(methodName);
-				@SuppressWarnings("unchecked")
-				Flow<Message> newInstance = (Flow<Message>) clazz.newInstance();
-				logger.info("processing " + methodName);
-				List<Message> list = newInstance.process(source.getUrl());
-				logger.info("processing done: " + list.size());
-				List<ByteString> bsList = new LinkedList<ByteString>();
-				for (Message msg : list) {
-					bsList.add(msg.toByteString());
-				}
-				processor.onServiceEvents(app.getId(), serviceId, clazz.getName(), bsList);
-			} catch (Exception e) {
-				logger.error(e.getMessage(), e);
-				logger.error("No class found: "+ methodName);
-			}
+			if (source.isManual()) continue;
+			
+			processSource(source);
 		}	
+	}
+	
+	private void processSource(SourceEntry source) {
+		String serviceId = source.getServiceId();
+		String methodName = source.getMethodName();
+		try {
+			Class<?> clazz = Class.forName(methodName);
+			@SuppressWarnings("unchecked")
+			Flow<Message> newInstance = (Flow<Message>) clazz.newInstance();
+			logger.info("processing " + methodName);
+			List<Message> list = newInstance.process(source.getUrl());
+			logger.info("processing done: " + list.size());
+			List<ByteString> bsList = new LinkedList<ByteString>();
+			for (Message msg : list) {
+				bsList.add(msg.toByteString());
+			}
+			processor.onServiceEvents(app.getId(), serviceId, clazz.getName(), bsList);
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+			logger.error("No class found: "+ methodName);
+		}
+	}
+	
+	public void trigger(Class<?> clazz, String appId) {
+		for (SourceEntry source : app.getSources()) {
+			if (clazz.getName().equalsIgnoreCase(source.getType())) {
+				logger.info("manual processing " + source.getType());
+				processSource(source);
+			}
+		}			
 	}
 	
 }

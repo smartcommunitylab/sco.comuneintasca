@@ -41,6 +41,15 @@ angular.module('DataService', [])
 		    });
 		    return deferred.promise;
 		},
+		triggerType: function(type) {
+		    var deferred = $q.defer();
+		    $http.put('console/trigger/'+type,{}).success(function(data) {
+		      deferred.resolve(data);
+		    }).error(function(e) {
+		      deferred.reject(e);
+		    });
+		    return deferred.promise;
+		},
 		logout : logout
     };
   }
