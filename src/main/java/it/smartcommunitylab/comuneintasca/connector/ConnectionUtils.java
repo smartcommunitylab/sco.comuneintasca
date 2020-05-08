@@ -86,7 +86,7 @@ public class ConnectionUtils {
 	}
 	
 	private static <T> T callRepeat(RestTemplate restTemplate, String url, Class<T> cls) {
-		logger.info("retriving url {} ...", url);
+		logger.debug("retriving url {} ...", url);
 		for (int i = 0; i < 3; i++) {
 			try {
 				try {
@@ -111,15 +111,16 @@ public class ConnectionUtils {
 	}
 
 	private static <T> T invokeTemplate(RestTemplate restTemplate, String url, Class<T> cls) throws InterruptedException, ExecutionException {
-		List<Future<T>> invokeAll = executor.invokeAll(Collections.singletonList(() -> {
-			return restTemplate.getForObject(url, cls);
-		}), 5000, TimeUnit.MILLISECONDS);
-		Future<T> f = invokeAll.get(0);
-		if (f.isCancelled()) {
-			throw new InterruptedException("Failed to retrieve");
-		}
-		logger.info("... done");
-		return f.get();
+		return restTemplate.getForObject(url, cls);
+//		List<Future<T>> invokeAll = executor.invokeAll(Collections.singletonList(() -> {
+//			return restTemplate.getForObject(url, cls);
+//		}), 5000, TimeUnit.MILLISECONDS);
+//		Future<T> f = invokeAll.get(0);
+//		if (f.isCancelled()) {
+//			throw new InterruptedException("Failed to retrieve");
+//		}
+//		logger.debug("... done");
+//		return f.get();
 	}
 }
 
