@@ -15,7 +15,6 @@
  ******************************************************************************/
 package it.smartcommunitylab.comuneintasca.connector.scripts;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -34,6 +33,7 @@ import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.ConfigLi
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nDouble;
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nLong;
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nString;
+import it.smartcommunitylab.comuneintasca.connector.ConnectionUtils;
 
 public class OpenContentScript {
 
@@ -102,7 +102,7 @@ public class OpenContentScript {
 		if (map.containsKey(lang)) {
 			return map.get(lang);
 		} else {
-			return Collections.EMPTY_MAP;
+			return Collections.emptyMap();
 		}
 	}
 
@@ -244,7 +244,7 @@ public class OpenContentScript {
 		for (Object o: l) {
 			String objName = (String)((Map)o).get(OBJECT_NAME);
 			String link = (String)((Map)o).get("link");
-			Map<String, Object> map = mapper.readValue(new URL(link), Map.class);
+			Map<String, Object> map = ConnectionUtils.call(link, Map.class);
 			String name = (String)getRecValue(map, METADATA, OBJECT_NAME);
 			res.put(objName, name);
 		}
@@ -257,7 +257,7 @@ public class OpenContentScript {
 		String name = null;
 		try {
 		String link = (String)((Map)m).get("link");
-		Map<String, Object> map = mapper.readValue(new URL(link), Map.class);
+		Map<String, Object> map = ConnectionUtils.call(link, Map.class);
 		name = (String)getRecValue(map, METADATA, OBJECT_NAME);
 		} catch (Exception e) {
 		}
