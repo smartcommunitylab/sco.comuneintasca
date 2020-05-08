@@ -15,6 +15,7 @@
  ******************************************************************************/
 package it.smartcommunitylab.comuneintasca.connector.flows;
 
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -43,7 +44,13 @@ public class TextsFlow implements Flow<I18nTesto> {
 		OpenContentScript ocs = new OpenContentScript();
 		List<String> links = ocs.extractLinks(mainStr);
 		for (String link : links) {
-			String string = it.smartcommunitylab.comuneintasca.connector.ConnectionUtils.call(link, String.class);
+			String string = null;
+			try {
+				string = it.smartcommunitylab.comuneintasca.connector.ConnectionUtils.call(link, String.class);
+			} catch (IOException e1) {
+				logger.error("Failed retrieving " + link, e1);;
+				continue;
+			}
 			String stringen = null;
 			try {
 				stringen = it.smartcommunitylab.comuneintasca.connector.ConnectionUtils.call(link + "?Translation=eng-GB", String.class);
