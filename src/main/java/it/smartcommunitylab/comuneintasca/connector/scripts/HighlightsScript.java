@@ -55,7 +55,7 @@ public class HighlightsScript extends OpenContentScript {
 			String objectId = line.get(4).toString();
 			String title = line.get(2).toString();
 			String url = line.get(1).toString();
-			item.setUri(url);
+			item.setExternalLink(url);
 			String itJson = ConnectionUtils.call(objectUrl + "/object/" + objectId, String.class);
 			String enJson = null;
 			String deJson = null;

@@ -43,6 +43,8 @@ public class MenuItem {
 	private Map<String,String> app;
 	private String elementType;
 	
+	private String externalLink; 
+	
 	private String uri;
 	
 	public String getId() {
@@ -141,4 +143,18 @@ public class MenuItem {
 	public void setUri(String uri) {
 		this.uri = uri;
 	}
+	/**
+	 * @return the externalLink
+	 */
+	public String getExternalLink() {
+		return externalLink;
+	}
+	/**
+	 * @param externalLink the externalLink to set
+	 */
+	public void setExternalLink(String externalLink) {
+		this.externalLink = externalLink;
+	}
+	
+	
 }
