@@ -24,6 +24,10 @@ import java.util.Map;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.google.api.client.http.HttpRequestInitializer;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.services.sheets.v4.Sheets;
 
 import it.smartcommunitylab.comuneintasca.storage.SyncObjectBean;
 import it.smartcommunitylab.comuneintasca.storage.data.BasicObject;
@@ -109,5 +113,37 @@ public class Util {
 		}
 	}
 
+	/**
+	 * Read a Google Sheet with the specified ID, range and using the specified key
+	 * @param sheet
+	 * @param range
+	 * @param apiKey
+	 * @return
+	 * @throws IOException
+	 */
+	public static List<List<Object>> extractContentFromGS(String sheet, String range, String apiKey) throws IOException {
+		List<List<Object>> values = getValues(sheet, range, apiKey);
+		return values;
+	}
+	
+	private static Sheets getSheets(String apiKey) {
+	    NetHttpTransport transport = new NetHttpTransport.Builder().build();
+	    JacksonFactory jsonFactory = JacksonFactory.getDefaultInstance();
+	    HttpRequestInitializer httpRequestInitializer = request -> {
+	        request.setInterceptor(intercepted -> intercepted.getUrl().set("key", apiKey));
+	    };
 
+	    return new Sheets.Builder(transport, jsonFactory, httpRequestInitializer)
+	            .setApplicationName("app name")
+	            .build();
+	}
+
+	private static List<List<Object>> getValues(String spreadsheetId, String range, String apiKey) throws IOException {
+	    return getSheets(apiKey)
+	            .spreadsheets()
+	            .values()
+	            .get(spreadsheetId, range)
+	            .execute()
+	            .getValues();
+	}
 }

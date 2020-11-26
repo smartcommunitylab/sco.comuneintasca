@@ -1,5 +1,10 @@
 package it.smartcommunitylab.comuneintasca.connector;
 
+import java.util.LinkedList;
+import java.util.List;
+
+import it.smartcommunitylab.comuneintasca.connector.processor.ConfigProcessor.ObjectFilters;
+
 public class SourceEntry {
 	private String type;
 	private String classifier;
@@ -10,6 +15,10 @@ public class SourceEntry {
 	private boolean autoPublish;
 	private boolean manual;
 	private String imagePath;
+	private List<String> ids;
+	private List<String> classifications;
+	
+	private ObjectFilters filters;
 	
 	public String getType() {
 		return type;
@@ -72,6 +81,43 @@ public class SourceEntry {
 	public void setManual(boolean manual) {
 		this.manual = manual;
 	}
-	
-	
+	/**
+	 * @return the ids
+	 */
+	public List<String> getIds() {
+		if (ids == null) ids = new LinkedList<>();
+		return ids;
+	}
+	/**
+	 * @param ids the ids to set
+	 */
+	public void setIds(List<String> ids) {
+		this.ids = ids;
+	}
+	/**
+	 * @return the classifications
+	 */
+	public List<String> getClassifications() {
+		if (classifications == null) classifications = new LinkedList<>();
+		return classifications;
+	}
+	/**
+	 * @param classifications the classifications to set
+	 */
+	public void setClassifications(List<String> classifications) {
+		this.classifications = classifications;
+	}
+	/**
+	 * @return the filters
+	 */
+	public ObjectFilters getFilters() {
+		return filters;
+	}
+	/**
+	 * @param filters the filters to set
+	 */
+	public void setFilters(ObjectFilters filters) {
+		this.filters = filters;
+	}
+
 }

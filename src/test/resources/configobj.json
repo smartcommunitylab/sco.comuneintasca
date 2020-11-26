@@ -1,83 +1,55 @@
+
 {
   "highlights": [
     {
-      "id": "profile_cit_fe1",
+      "id": "d78c91c5884e92202361614f135e571a1",
       "name": {
-        "it": "Festival dell'Economia 2018: Lavoro e tecnologia",
-        "en": "Festival dell'Economia 2018: Lavoro e tecnologia",
-        "de": "Festival dell'Economia 2018: Lavoro e tecnologia"
+        "it": "URP punto di riferimento per i cittadini",
+        "en": "URP punto di riferimento per i cittadini",
+        "de": "URP punto di riferimento per i cittadini"
       },
       "image": {
-        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/tutti-gli-eventi\/festival-dell-economia-2018-lavoro-e-tecnologia\/11107625-2-ita-IT\/Festival-dell-Economia-2018-Lavoro-e-tecnologia.jpg",
-        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/tutti-gli-eventi\/festival-dell-economia-2018-lavoro-e-tecnologia\/11107625-2-ita-IT\/Festival-dell-Economia-2018-Lavoro-e-tecnologia.jpg",
-        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/aree-tematiche\/turismo\/eventi\/tutti-gli-eventi\/festival-dell-economia-2018-lavoro-e-tecnologia\/11107625-2-ita-IT\/Festival-dell-Economia-2018-Lavoro-e-tecnologia.jpg"
+        "it": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/emergenza-virus-l-ufficio-relazioni-con-il-pubblico-urp-e-il-riferimento-unico-per-i-cittadini/12199356-1-ita-IT/Emergenza-virus-l-Ufficio-relazioni-con-il-pubblico-Urp-e-il-riferimento-unico-per-i-cittadini_imagefull.jpg",
+        "en": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/emergenza-virus-l-ufficio-relazioni-con-il-pubblico-urp-e-il-riferimento-unico-per-i-cittadini/12199356-1-ita-IT/Emergenza-virus-l-Ufficio-relazioni-con-il-pubblico-Urp-e-il-riferimento-unico-per-i-cittadini_imagefull.jpg",
+        "de": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/emergenza-virus-l-ufficio-relazioni-con-il-pubblico-urp-e-il-riferimento-unico-per-i-cittadini/12199356-1-ita-IT/Emergenza-virus-l-Ufficio-relazioni-con-il-pubblico-Urp-e-il-riferimento-unico-per-i-cittadini_imagefull.jpg"
       },
+      "type": "content",
       "objectIds": [
-        "5e9cbb1a9e52b8a93bc2cbca1d063d22"
+        "428b6f5729555117e0623b82f125cab5"
       ]
     },
     {
-      "id": "d757ee0813bdcc5b6f74044e004226dc",
+      "id": "f238baba7fa65d3b5a5cf703e7c1aea01",
       "name": {
-        "it": "Livetrento",
-        "en": "Livetrento",
-        "de": "Livetrento"
+        "it": "Coronavirus: iniziative del Comune per l'emergenza",
+        "en": "Coronavirus: iniziative del Comune per l'emergenza",
+        "de": "Coronavirus: iniziative del Comune per l'emergenza"
       },
       "image": {
-        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867529-1-ita-IT\/Livetrento.jpg",
-        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867534-2-eng-GB\/Livetrento.jpg",
-        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/livetrento\/9867539-3-ger-DE\/Livetrento.jpg"
+        "it": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-iniziative-del-comune-per-l-emergenza/12190701-5-ita-IT/Coronavirus-iniziative-del-Comune-per-l-emergenza_imagefull.jpg",
+        "en": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-iniziative-del-comune-per-l-emergenza/12190701-5-ita-IT/Coronavirus-iniziative-del-Comune-per-l-emergenza_imagefull.jpg",
+        "de": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-iniziative-del-comune-per-l-emergenza/12190701-5-ita-IT/Coronavirus-iniziative-del-Comune-per-l-emergenza_imagefull.jpg"
       },
+      "type": "content",
       "objectIds": [
-        "48b624c0fc02e87c43728ca839ae50f5"
+        "f238baba7fa65d3b5a5cf703e7c1aea0"
       ]
     },
     {
-      "id": "8cc43799380fcd360be1219b9fa6b152",
+      "id": "9b8e70e9c0d3fe3a5b2bd7c8c619b99b1",
       "name": {
-        "it": "Museum Pass",
-        "en": "Museum Pass",
-        "de": "Museum Pass"
+        "it": "Coronavirus - 10 comportamenti da seguire",
+        "en": "Coronavirus - 10 comportamenti da seguire",
+        "de": "Coronavirus - 10 comportamenti da seguire"
       },
       "image": {
-        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622743-10-ita-IT\/Museum-Pass.jpg",
-        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622748-11-eng-GB\/Museum-Pass.jpg",
-        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/museum-pass\/8622753-12-ger-DE\/Museum-Pass.jpg"
+        "it": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-in-trentino/12199396-2-ita-IT/Coronavirus-in-Trentino_imagefull.jpg",
+        "en": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-in-trentino/12199396-2-ita-IT/Coronavirus-in-Trentino_imagefull.jpg",
+        "de": "https://www.comune.trento.it/var/comunetn/storage/images/aree-tematiche/smart-city/utilita/coronavirus-in-trentino/12199396-2-ita-IT/Coronavirus-in-Trentino_imagefull.jpg"
       },
+      "type": "content",
       "objectIds": [
-        "text.3005"
-      ]
-    },
-    {
-      "id": "profile_cit_405be9ac05df567b4c87b4d31119e52e",
-      "name": {
-        "it": "Muse",
-        "en": "Muse",
-        "de": "Muse"
-      },
-      "image": {
-        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554673\/1-ita-IT\/Muse1.jpg",
-        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images-versioned\/8554678\/1-eng-GB\/Muse1.jpg",
-        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni-mobile\/comune-in-tasca\/turista\/in-evidenza\/muse\/8554683-2-ger-DE\/Muse.jpg"
-      },
-      "objectIds": [
-        "cultura.72"
-      ]
-    },
-    {
-      "id": "d347c18f3a931ae6a512b7d80591afd8",
-      "name": {
-        "it": "Come arrivare a Trento",
-        "en": "How to arrive to Trento",
-        "de": "Nach Trient kommen"
-      },
-      "image": {
-        "it": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622728-36-ita-IT\/Come-arrivare-a-Trento.jpg",
-        "en": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622733-37-eng-GB\/How-to-arrive-to-Trento.jpg",
-        "de": "http:\/\/www.comune.trento.it\/var\/comunetn\/storage\/images\/applicazioni\/comune-in-tasca\/turista\/in-evidenza\/come-arrivare-a-trento\/8622738-38-ger-DE\/Nach-Trient-kommen.jpg"
-      },
-      "objectIds": [
-        "4b8834e1c27b237c07faebc96d8dab37"
+        "89a4610e8c0da2776047b0d6912ebaaa"
       ]
     }
   ],
@@ -313,6 +285,9 @@
             "classifications": [
               {
                 "tipo_luogo": "Altri siti di interesse storico artistico"
+              },
+              {
+                "tipo_luogo": "Altri siti di interesse turistico"
               }
             ]
           }

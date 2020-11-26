@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
+import it.smartcommunitylab.comuneintasca.connector.processor.ConfigProcessor;
 import it.smartcommunitylab.comuneintasca.connector.processor.DataProcessor;
 
 @Component
@@ -18,6 +19,8 @@ public class AppManager {
 
 	@Autowired
 	private AppRepository appRepository; 
+	@Autowired
+	private ConfigProcessor configProcessor;
 	
 	private Map<String, App> appMap = new HashMap<String, App>();
 	private Map<String, Subscriber> subscriberMap = new HashMap<String, Subscriber>();
@@ -30,7 +33,7 @@ public class AppManager {
 			App old = appRepository.findByApp(app.getId());
 			merge(app, old);
 			Subscriber subscriber = new Subscriber();
-			subscriber.subscribe(app, processor);
+			subscriber.subscribe(app, processor, configProcessor);
 			appRepository.save(app);
 			appMap.put(app.getId(), app);
 			subscriberMap.put(app.getId(), subscriber);

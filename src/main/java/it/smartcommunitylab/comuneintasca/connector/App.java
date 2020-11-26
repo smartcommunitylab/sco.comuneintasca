@@ -4,13 +4,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import it.smartcommunitylab.comuneintasca.core.model.MenuItem;
+
 public class App {
 
 	private String id;
 	private List<SourceEntry> sources;
 
+	private String highlightsId, objectUrl, imagePath;
+	
 	private Map<TypeClassifier, SourceEntry> entryMap = null;
 
+	private List<MenuItem> highlights;
+	
 	public String getId() {
 		return id;
 	}
@@ -39,10 +45,72 @@ public class App {
 	}
 	
 	public List<SourceEntry> getSources() {
+		if (sources != null) {
+			sources.forEach(s -> {
+				if (s.getImagePath() == null) s.setImagePath(imagePath);
+			});
+		}
 		return sources;
 	}
 
 	public void setSources(List<SourceEntry> sources) {
 		this.sources = sources;
 	}
+
+	/**
+	 * @return the highlightsId
+	 */
+	public String getHighlightsId() {
+		return highlightsId;
+	}
+
+	/**
+	 * @param highlightsId the highlightsId to set
+	 */
+	public void setHighlightsId(String highlightsId) {
+		this.highlightsId = highlightsId;
+	}
+
+	/**
+	 * @return the objectUrl
+	 */
+	public String getObjectUrl() {
+		return objectUrl;
+	}
+
+	/**
+	 * @param objectUrl the objectUrl to set
+	 */
+	public void setObjectUrl(String objectUrl) {
+		this.objectUrl = objectUrl;
+	}
+
+	/**
+	 * @return the imagePath
+	 */
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	/**
+	 * @param imagePath the imagePath to set
+	 */
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+
+	/**
+	 * @return the highlights
+	 */
+	public List<MenuItem> getHighlights() {
+		return highlights;
+	}
+
+	/**
+	 * @param highlights the highlights to set
+	 */
+	public void setHighlights(List<MenuItem> highlights) {
+		this.highlights = highlights;
+	}
+	
 }

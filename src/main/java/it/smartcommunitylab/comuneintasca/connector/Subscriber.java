@@ -25,6 +25,7 @@ import com.google.protobuf.ByteString;
 import com.google.protobuf.Message;
 
 import it.smartcommunitylab.comuneintasca.connector.flows.Flow;
+import it.smartcommunitylab.comuneintasca.connector.processor.ConfigProcessor;
 import it.smartcommunitylab.comuneintasca.connector.processor.DataProcessor;
 
 
@@ -33,14 +34,21 @@ public class Subscriber {
 	private Log logger = LogFactory.getLog(getClass());
 	private App app;
 	private DataProcessor processor;
+	private ConfigProcessor configProcessor;
 	
-	public void subscribe(App app, DataProcessor processor) {
+	public void subscribe(App app, DataProcessor processor, ConfigProcessor configProcessor) {
 		logger.info("SUBSCRIBING app "+app.getId());
 		this.app = app;
 		this.processor = processor;
+		this.configProcessor = configProcessor;
 	}
 	
 	public void process() {
+		try {
+			configProcessor.buildConfig(app);
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+		}
 		for (SourceEntry source : app.getSources()) {
 			if (source.isManual()) continue;
 			
@@ -62,10 +70,10 @@ public class Subscriber {
 			for (Message msg : list) {
 				bsList.add(msg.toByteString());
 			}
-			processor.onServiceEvents(app.getId(), serviceId, clazz.getName(), bsList);
+			processor.onServiceEvents(app, serviceId, clazz.getName(), bsList);
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
-			logger.error("No class found: "+ methodName);
+			logger.error("Error processing "+ methodName);
 		}
 	}
 	

@@ -40,12 +40,18 @@ public class TestiScript extends OpenContentScript {
 		}
 		
 		builder.setTitle(getI18NStringValue(i18n, FIELDS, "name", VALUE));
-		
+		if (!builder.getTitle().hasIt()) {
+			builder.setTitle(emptyI18NStringValue());
+		}
+
 		builder.setClassification(getI18NStringValue(i18n, FIELDS, "classifications", VALUE));
 		
 		builder.setDescription(getI18NStringValue(i18n, FIELDS, "description", VALUE));
 		if (!builder.getDescription().hasIt()) {
 			builder.setDescription(getI18NStringValue(i18n, FIELDS, "descrizione", VALUE));
+		}
+		if (!builder.getDescription().hasIt()) {
+			builder.setDescription(emptyI18NStringValue());
 		}
 
 		builder.setSubtitle(getI18NStringValue(i18n, FIELDS, "abstract", VALUE));

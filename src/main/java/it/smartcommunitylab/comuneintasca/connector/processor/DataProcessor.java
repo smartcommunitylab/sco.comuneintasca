@@ -1,10 +1,8 @@
 package it.smartcommunitylab.comuneintasca.connector.processor;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import org.slf4j.Logger;
@@ -17,7 +15,6 @@ import com.google.protobuf.ByteString;
 
 import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.ConfigData;
 import it.smartcommunitylab.comuneintasca.connector.App;
-import it.smartcommunitylab.comuneintasca.connector.AppManager;
 import it.smartcommunitylab.comuneintasca.connector.ConnectorStorage;
 import it.smartcommunitylab.comuneintasca.connector.SourceEntry;
 import it.smartcommunitylab.comuneintasca.connector.flows.ConfigFlow;
@@ -55,8 +52,6 @@ import it.smartcommunitylab.comuneintasca.storage.exception.DataException;
 public class DataProcessor  {
 
 	@Autowired
-	private AppManager appManager;
-	@Autowired
 	private DataService dataService;
 
 	@Autowired
@@ -65,14 +60,13 @@ public class DataProcessor  {
 	@Autowired
 	private ConnectorStorage connectorStorage;
 
-	@Autowired
-	private ConfigProcessor configProcessor;
-	
+//	@Autowired
+//	private ConfigProcessor configProcessor;
+//	
 	private static Logger logger = LoggerFactory.getLogger(DataProcessor.class);
 
-	public void onServiceEvents(String appId, String serviceId, String className, List<ByteString> data) {
+	public void onServiceEvents(App app, String serviceId, String className, List<ByteString> data) {
 		logger.debug("Processing update for {}/{}",serviceId, className);
-		App app = appManager.getApp(appId, serviceId, className);
 		if (app == null) return;
 		logger.debug("-- found app {}",app.getId());
 		SourceEntry entry = app.findEntry(serviceId, className);
@@ -118,14 +112,15 @@ public class DataProcessor  {
 		ObjectMapper mapper = new ObjectMapper();
 
 		DynamicConfigObject config = mapper.readValue(d, DynamicConfigObject.class);
+		config.setHighlights(app.getHighlights());
 
-		logger.info("Updating config");
-		try {
-			configProcessor.buildConfig(config, app);
-		} catch (Exception e) {
-			logger.error(e.getMessage(), e);
-			return;
-		}
+//		logger.info("Updating config");
+//		try {
+//			configProcessor.buildConfig(config, app);
+//		} catch (Exception e) {
+//			logger.error(e.getMessage(), e);
+//			return;
+//		}
 
 		List<DynamicConfigObject> oldList = dataService.getDraftObjects(DynamicConfigObject.class, app.getId());
 		DynamicConfigObject old = null;
@@ -145,7 +140,7 @@ public class DataProcessor  {
 					dataService.publishObject(config, app.getId());
 					logger.info("Published updated config.");
 				}
-				updateAll(config, app);
+//				updateAll(config, app);
 			}
 		} else {
 			logger.info("New config");
@@ -160,55 +155,58 @@ public class DataProcessor  {
 				dataService.publishObject(config, app.getId());
 				logger.info("Published new config.");
 			}
-			updateAll(config, app);
+//			updateAll(config, app);
 		}
 
 	}
 
-	@SuppressWarnings("rawtypes")
-	private void updateAll(DynamicConfigObject config, App app) throws DataException {
-		Map<String,ObjectFilters> map = configProcessor.constructFilters(config);
-		Map<Class, ObjectFilters> classMap = new HashMap<Class, ObjectFilters>();
-		List<AppObject> allObjects = connectorStorage.getAllAppObjects(app.getId());
-		for (AppObject o : allObjects) {
-			if (o instanceof BaseCITObject) {
-				if (!classMap.containsKey(o.getClass())) {
-					ObjectFilters filters = null;
-					MappingDescriptor md = configProcessor.findDescriptor(o.getClass());
-					if (md != null) {
-						filters = map.get(md.getLocalType());
-					}
-					classMap.put(o.getClass(), filters);
-				}
-				Boolean applies = applies((BaseCITObject)o, classMap.get(o.getClass()));
-				AppObject draftObject = dataService.getDraftObject(o.getId(), app.getId());
-				if (draftObject != null && !applies) {
-					dataService.deleteObject(draftObject, app.getId());
-					dataService.unpublishObject(draftObject, app.getId());
-				} else if (applies) {
-					dataService.upsertObject(o, app.getId());
-					SourceEntry entry = app.findEntryByType(o.getClass().getName(), ((BaseCITObject) o).getClassifier());
-					if (entry != null && entry.isAutoPublish()) {
-						dataService.publishObject(o, app.getId()); 
-					}
-				}
-			}
-		}
-	}	
+//	@SuppressWarnings("rawtypes")
+//	private void updateAll(DynamicConfigObject config, App app) throws DataException {
+////		Map<String,ObjectFilters> map = configProcessor.constructFilters(config);
+////		Map<Class, ObjectFilters> classMap = new HashMap<Class, ObjectFilters>();
+//		List<AppObject> allObjects = connectorStorage.getAllAppObjects(app.getId());
+//		for (AppObject o : allObjects) {
+//			if (o instanceof BaseCITObject) {
+//				if (!classMap.containsKey(o.getClass())) {
+//					ObjectFilters filters = null;
+//					MappingDescriptor md = configProcessor.findDescriptor(o.getClass());
+//					if (md != null) {
+//						filters = map.get(md.getLocalType());
+//					}
+//					classMap.put(o.getClass(), filters);
+//				}
+//				Boolean applies = applies((BaseCITObject)o, classMap.get(o.getClass()));
+//				AppObject draftObject = dataService.getDraftObject(o.getId(), app.getId());
+//				if (draftObject != null && !applies) {
+//					dataService.deleteObject(draftObject, app.getId());
+//					dataService.unpublishObject(draftObject, app.getId());
+//				} else if (applies) {
+//					dataService.upsertObject(o, app.getId());
+//					SourceEntry entry = app.findEntryByType(o.getClass().getName(), ((BaseCITObject) o).getClassifier());
+//					if (entry != null && entry.isAutoPublish()) {
+//						dataService.publishObject(o, app.getId()); 
+//					}
+//				}
+//			}
+//		}
+//	}	
 
 	private boolean applies(BaseCITObject o, ObjectFilters filters) {
 		if (filters == null) return false;
 		return filters.applies(o);
 	}
 
-	private ObjectFilters getFilters(String key, App app) throws DataException {
-		List<DynamicConfigObject> oldList = connectorStorage.getObjectsByType(DynamicConfigObject.class, app.getId());
-		if (oldList != null && oldList.size() > 0) {
-			DynamicConfigObject old = oldList.get(0);
-			Map<String, ObjectFilters> constructFilters = configProcessor.constructFilters(old);
-			return constructFilters.get(key);
-		}
-
+	private ObjectFilters getFilters(String key, String classifier, App app) throws DataException {
+//		List<DynamicConfigObject> oldList = connectorStorage.getObjectsByType(DynamicConfigObject.class, app.getId());
+//		if (oldList != null && oldList.size() > 0) {
+//			DynamicConfigObject old = oldList.get(0);
+//			Map<String, ObjectFilters> constructFilters = configProcessor.constructFilters(old);
+//			return constructFilters.get(key);
+//		}
+		SourceEntry entry = app.findEntryByType(TypeConstants.getTypeMapping(key).getName(), classifier);
+		if (entry != null) {
+			return entry.getFilters();
+		} 
 		return null;
 	}
 	
@@ -233,7 +231,7 @@ public class DataProcessor  {
 
 		Set<String> oldIds = getOldIds(targetCls, classifier, app.getId());
 		List<T> toPublish = new ArrayList<T>();
-		ObjectFilters filters = getFilters(filterType, app); 
+		ObjectFilters filters = getFilters(filterType, classifier, app); 
 		for (ByteString bs : data) {
 			S bt = extractor.readData(bs);
 			String id = extractor.getId(bt);
