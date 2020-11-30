@@ -249,6 +249,7 @@ public class DataProcessor  {
 				toPublish.add(obj);
 			}
 		}
+		logger.info("Processed " + data.size() +", after filtering " + toPublish.size());
 		dataService.upsertType(toPublish, targetCls, app.getId(), classifier);
 		if (entry.isAutoPublish()) {
 			dataService.publishType(targetCls, app.getId(), classifier);
