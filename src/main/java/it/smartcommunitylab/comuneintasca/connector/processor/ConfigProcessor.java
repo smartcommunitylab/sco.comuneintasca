@@ -1,5 +1,6 @@
 package it.smartcommunitylab.comuneintasca.connector.processor;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -70,7 +71,12 @@ public class ConfigProcessor {
 	public void buildConfig(App app) throws Exception {
 		ListMultimap<String, String> map = ArrayListMultimap.create();
 		if (!StringUtils.isEmpty(app.getHighlightsId())) {
-			List<MenuItem> highlights = new HighlightsScript().extractContent(app.getHighlightsId(), apikey, app.getObjectUrl(), app.getImagePath(), descriptors);
+			List<MenuItem> highlights = Collections.emptyList();
+			try {
+				highlights = new HighlightsScript().extractContent(app.getHighlightsId(), apikey, app.getObjectUrl(), app.getImagePath(), descriptors);
+			} catch (Exception e) {
+				logger.error(e.getMessage(), e);
+			}
 			app.setHighlights(highlights);
 			highlights.forEach(h -> {
 				map.put(TypeConstants.getTypeMapping(h.getType()).getName(), h.getObjectIds().get(0));

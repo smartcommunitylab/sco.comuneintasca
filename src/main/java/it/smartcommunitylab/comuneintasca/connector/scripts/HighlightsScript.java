@@ -71,7 +71,7 @@ public class HighlightsScript extends OpenContentScript {
 			}
 			Map<String, Map<String, Object>> i18n = buildMap(langs, itJson, enJson, deJson);
 			item.setId(objectId);
-			item.setType(descriptors.get(line.get(3)).getLocalType());
+			item.setType(descriptors.get(((String)line.get(3)).toLowerCase()).getLocalType());
 //			item.setName(getI18NStringValueMap(i18n, FIELDS, "titolo", VALUE));
 //			if (!item.getName().containsKey("it")) {
 //				item.setName(getI18NStringValueMap(i18n, FIELDS, "title", VALUE));
