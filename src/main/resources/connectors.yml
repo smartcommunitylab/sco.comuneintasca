@@ -1,6 +1,6 @@
 apps:
   - id: TrentoInTasca
-    highlightsId: "1i2wTNBna0tLSTltbgDoDcUkmc4-yrod2JwXbhUE4oM8"
+    highlightsId: "1DAXd8MPleFVQR7wL99__VTVfldlxhLHnlL5tVCkUBGc"
     objectUrl: https://www.comune.trento.it/api/opendata/v1/content/
     imagePath: http://www.comune.trento.it/
     sources: 
