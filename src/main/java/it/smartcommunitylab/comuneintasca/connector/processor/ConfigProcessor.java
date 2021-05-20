@@ -47,6 +47,7 @@ public class ConfigProcessor {
 	private static Map<String, MappingDescriptor> descriptors = new HashMap<String, MappingDescriptor>();
 	static {
 		descriptors.put("event", new EventMappingDescriptor());
+		descriptors.put("evento", descriptors.get("event"));
 		descriptors.put("ristorante",new MappingDescriptor("ristorante", TypeConstants.TYPE_RESTAURANT, RestaurantObject.class, "tipo_ristorante")); 
 		descriptors.put("accomodation",new MappingDescriptor("accomodation", TypeConstants.TYPE_HOTEL, HotelObject.class,"tipo_alloggio")); 
 		descriptors.put("iniziativa",new MappingDescriptor("iniziativa", TypeConstants.TYPE_MAINEVENT, MainEventObject.class, "tipo_evento")); 

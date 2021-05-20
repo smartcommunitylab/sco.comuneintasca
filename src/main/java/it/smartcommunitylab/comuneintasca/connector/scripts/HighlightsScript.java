@@ -40,6 +40,23 @@ public class HighlightsScript extends OpenContentScript {
 
 	private static final Logger logger = LoggerFactory.getLogger(HighlightsScript.class);
 		
+	
+//	public static void main(String[] args) throws Exception {
+//		Map<String, MappingDescriptor> descriptors = new HashMap<String, MappingDescriptor>();
+//			descriptors.put("event", new EventMappingDescriptor());
+//			descriptors.put("evento", descriptors.get("event"));
+//			descriptors.put("ristorante",new MappingDescriptor("ristorante", TypeConstants.TYPE_RESTAURANT, RestaurantObject.class, "tipo_ristorante")); 
+//			descriptors.put("accomodation",new MappingDescriptor("accomodation", TypeConstants.TYPE_HOTEL, HotelObject.class,"tipo_alloggio")); 
+//			descriptors.put("iniziativa",new MappingDescriptor("iniziativa", TypeConstants.TYPE_MAINEVENT, MainEventObject.class, "tipo_evento")); 
+//			descriptors.put("itinerario",new MappingDescriptor("itinerario", TypeConstants.TYPE_ITINERARY, ItineraryObject.class));
+//			descriptors.put("luogo",new MappingDescriptor("luogo", TypeConstants.TYPE_POI, POIObject.class, "tipo_luogo")); 
+//			descriptors.put("testo_generico",new MappingDescriptor("testo_generico", TypeConstants.TYPE_CONTENT, ContentObject.class, "classifications")); 
+//			descriptors.put("folder",new MappingDescriptor("folder", TypeConstants.TYPE_CONTENT, ContentObject.class, "classifications")); 
+//			descriptors.put("servizio_sul_territorio",new MappingDescriptor("servizio_sul_territorio", TypeConstants.TYPE_TERRITORY_SERVICE, TerritoryServiceObject.class, "tipo_servizio_sul_territorio", "tipo_luogo")); 
+//		
+//		new HighlightsScript().extractContent("1DAXd8MPleFVQR7wL99__VTVfldlxhLHnlL5tVCkUBGc", "", "https://www.comune.trento.it/api/opendata/v1/content/", null, descriptors);
+//	}
+	
 	/**
 	 * Reading Google Sheet with header row and 4 columns: order, URL, class, object ID
 	 * @param id
