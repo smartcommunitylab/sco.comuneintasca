@@ -21,9 +21,11 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.StringUtils;
 
 import it.smartcommunitylab.comuneintasca.connector.ConnectionUtils;
 import it.smartcommunitylab.comuneintasca.connector.processor.MappingDescriptor;
@@ -48,7 +50,7 @@ public class HighlightsScript extends OpenContentScript {
 	public List<MenuItem> extractContent(String id, String key, String objectUrl, String imagePath, Map<String, MappingDescriptor> descriptors) throws Exception {
 		List<List<Object>> highlights = Util.extractContentFromGS(id, "A:E", key);
 		List<MenuItem> items = new LinkedList<>();
-		highlights = highlights.subList(1, highlights.size());
+		highlights = highlights.subList(1, highlights.size()).stream().filter(row -> row.size() > 0 && row.get(0) != null && StringUtils.hasText(row.get(0).toString())).collect(Collectors.toList());
 		highlights.sort((a,b) -> a.get(0).toString().compareTo(b.get(0).toString()));
 		for (List<Object> line : highlights) {
 			MenuItem item = new MenuItem();
