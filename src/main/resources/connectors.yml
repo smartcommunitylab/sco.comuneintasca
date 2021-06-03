@@ -45,15 +45,23 @@ apps:
           serviceId: smartcampus.service.opendata
           methodName: it.smartcommunitylab.comuneintasca.connector.flows.CulturaFlow
           autoPublish: true
-          classifications: 
-            - "edificio storico"
-            - "natura"
+          classifications:
             - "altri siti di interesse turistico"
-            - "parcheggio"
+            - "altro sito di interesse turistico" 
+            - "area archeologica"
             - "chiesa"
+            - "edificio storico"
+            - "fontana"
+            - "luogo di Cesare Battisti"
+            - "luogo di Chiara Lubich"
+            - "monumento"
+            - "museo"
+            - "natura"
+            - "piazza"
+            # questi sotto da ignorare?
+            - "parcheggio"
             - "musei"
             - "farmacia"
-            - "area archeologica"
             - "altri siti di interesse storico artistico"
           
         - type: it.smartcommunitylab.comuneintasca.core.model.RestaurantObject

@@ -1,6 +1,7 @@
 package it.smartcommunitylab.comuneintasca.connector.processor;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -260,9 +261,19 @@ public class DataExtractor {
 			no.setId(bt.getId());
 			no.setAddress(toMap(bt.getAddress()));
 			no.setCategory("cultura");
-			// TODO: classification
+			
 			no.setClassification(toMap(bt.getClassification()));
-			no.setCat(toCat(TypeConstants.TYPE_POI, no.getClassification()));
+			String cats = no.getClassification().get("it");
+			if (!StringUtils.isEmpty(cats)) {
+				List<String> catSet = Arrays.asList(StringUtils.commaDelimitedListToStringArray(cats));
+				if (catSet.size() > 1) {
+					System.err.println(catSet);
+				}
+				no.getClassification().put("it", catSet.get(0));
+				final Map<String, List<String>> res = new HashMap<>();
+				catSet.forEach(c -> mergeCat(res, getICategories(TypeConstants.TYPE_POI, c.trim())));
+				no.setCat(res);
+			}
 
 			Map<String, String> contacts = new HashMap<String, String>();
 			contacts.put("email", bt.getEmail());

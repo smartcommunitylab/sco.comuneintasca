@@ -1,81 +1,185 @@
 {
 	"poi": {
+    "Altri siti di interesse storico artistico": {
+      "it": ["Altri siti di interesse storico artistico"],
+      "en": ["Other sites of historical and artistic interest"],
+      "de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
+    },
+    "Altri siti di interesse turistico": {
+      "it": ["Altri siti di interesse storico artistico"],
+      "en": ["Other sites of historical and artistic interest"],
+      "de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
+    },
+    "Altro sito di interesse turistico": {
+      "it": ["Altri siti di interesse storico artistico"],
+      "en": ["Other sites of historical and artistic interest"],
+      "de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
+    },
+    "altro sito di interesse turistico": {
+      "it": ["Altri siti di interesse storico artistico"],
+      "en": ["Other sites of historical and artistic interest"],
+      "de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
+    },
+
+    "Aree archeologiche": {
+      "it": ["Aree archeologiche"],
+      "en": ["Archaeological Areas"],
+      "de": ["Arch\u00e4ologische St\u00e4tten"]
+    },
+    "Area archeologica": {
+        "it": ["Aree archeologiche"],
+        "en": ["Archaeological Areas"],
+        "de": ["Arch\u00e4ologische St\u00e4tten"]
+    },
+    "area archeologica": {
+        "it": ["Aree archeologiche"],
+        "en": ["Archaeological Areas"],
+        "de": ["Arch\u00e4ologische St\u00e4tten"]
+    },
+
+    "Chiese": {
+      "it": ["Chiese"],
+      "en": ["Churches"],
+      "de": ["Kirchen"]
+    },
+    "chiese": {
+        "it": ["Chiese"],
+        "en": ["Churches"],
+        "de": ["Kirchen"]
+    },
+    "Chiesa": {
+        "it": ["Chiese"],
+        "en": ["Churches"],
+        "de": ["Kirchen"]
+    },
+    "chiesa": {
+        "it": ["Chiese"],
+        "en": ["Churches"],
+        "de": ["Kirchen"]
+    },
+    
+    
+    "Edifici storici": {
+      "it": ["Edifici storici"],
+      "en": ["Historic Buildings"],
+      "de": ["Historische Geb\u00e4ude"]
+    },
+    "Edificio storico": {
+        "it": ["Edifici storici"],
+        "en": ["Historic Buildings"],
+        "de": ["Historische Geb\u00e4ude"]
+    },
+    "edificio storico": {
+        "it": ["Edifici storici"],
+        "en": ["Historic Buildings"],
+        "de": ["Historische Geb\u00e4ude"]
+    },
+    
+	
+    "Fontana": {
+      "it": ["Fontane"],
+      "en": ["Fountains"],
+      "de": ["Brunnen"]
+    },
+    "Fontane": {
+      "it": ["Fontane"],
+      "en": ["Fountains"],
+      "de": ["Brunnen"]
+    },
+
+    "Luogo di Cesare Battisti": {
+      "it": [ "Luoghi di Cesare Battisti" ],
+      "en": [ "Places of Cesare Battisti" ],
+      "de": [ "Places of Cesare Battisti" ]
+    },
+    "luogo di cesare battisti": {
+      "it": [ "Luoghi di Cesare Battisti" ],
+      "en": [ "Places of Cesare Battisti" ],
+      "de": [ "Places of Cesare Battisti" ]
+    },
+
+    "Luogo di Chiara Lubich": {
+      "it": [ "Luoghi di Chiara Lubich" ],
+      "en": [ "Places of Chiara Lubich" ],
+      "de": [ "Places of Chiara Lubich" ]
+    },
+    "luogo di chiara lubich": {
+      "it": [ "Luoghi di Chiara Lubich" ],
+      "en": [ "Places of Chiara Lubich" ],
+      "de": [ "Places of Chiara Lubich" ]
+    },
+
+    "Monumento": {
+      "it": [ "Monumenti" ],
+      "en": [ "Monuments" ],
+      "de": [ "Monuments" ]
+    },
+    "monumento": {
+      "it": [ "Monumenti" ],
+      "en": [ "Monuments" ],
+      "de": [ "Monuments" ]
+    },
+
 		"Musei": {
-			"it": [
-				"Musei"
-			],
-			"en": [
-				"Museums"
-			],
-			"de": [
-				"Museen"
-			]
+			"it": [ "Musei" ],
+			"en": [ "Museums" ],
+			"de": [ "Museen" ]
 		},
-		"Edifici storici": {
-			"it": ["Edifici storici"],
-			"en": ["Historic Buildings"],
-			"de": ["Historische Geb\u00e4ude"]
-		},
-        "Edificio storico": {
-            "it": ["Edifici storici"],
-            "en": ["Historic Buildings"],
-            "de": ["Historische Geb\u00e4ude"]
-        },
-		"Chiese": {
-			"it": ["Chiese"],
-			"en": ["Churches"],
-			"de": ["Kirchen"]
-		},
-        "chiese": {
-            "it": ["Chiese"],
-            "en": ["Churches"],
-            "de": ["Kirchen"]
-        },
-        "Chiesa": {
-            "it": ["Chiese"],
-            "en": ["Churches"],
-            "de": ["Kirchen"]
-        },
-		"Aree archeologiche": {
-			"it": ["Aree archeologiche"],
-			"en": ["Archaeological Areas"],
-			"de": ["Arch\u00e4ologische St\u00e4tten"]
-		},
-        "Area archeologica": {
-            "it": ["Aree archeologiche"],
-            "en": ["Archaeological Areas"],
-            "de": ["Arch\u00e4ologische St\u00e4tten"]
-        },
+    "musei": {
+      "it": [ "Musei" ],
+      "en": [ "Museums" ],
+      "de": [ "Museen" ]
+    },
+    "Museo": {
+      "it": [ "Musei" ],
+      "en": [ "Museums" ],
+      "de": [ "Museen" ]
+    },
+    "museo": {
+      "it": [ "Musei" ],
+      "en": [ "Museums" ],
+      "de": [ "Museen" ]
+    },
+
+
 		"Natura": {
 			"it": ["Natura"],
 			"en": ["Nature"],
 			"de": ["Natur"]
 		},
-		"Altri siti di interesse storico artistico": {
-			"it": ["Altri siti di interesse storico artistico"],
-			"en": ["Other sites of historical and artistic interest"],
-			"de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
-		},
-		"Altri siti di interesse turistico": {
-			"it": ["Altri siti di interesse storico artistico"],
-			"en": ["Other sites of historical and artistic interest"],
-			"de": ["Andere Seiten von historischem und k\u00fcnstlerischem Interesse"]
-		},
-        "Parcheggi": {
-            "it": ["Parcheggi"],
-            "en": ["Parking"],
-            "de": ["Parkplatz"]
-        },
-        "Farmacie": {
-            "it": ["Farmacie"],
-            "en": ["Pharmacies"],
-            "de": ["Apotheken"]
-        },
+    "natura": {
+      "it": ["Natura"],
+      "en": ["Nature"],
+      "de": ["Natur"]
+    },
+
+    "piazza": {
+      "it": ["Piazze"],
+      "en": ["Squares"],
+      "de": ["Squares"]
+    },
+    "Piazza": {
+      "it": ["Piazze"],
+      "en": ["Squares"],
+      "de": ["Squares"]
+    },
+		
+    "Parcheggi": {
+        "it": ["Parcheggi"],
+        "en": ["Parking"],
+        "de": ["Parkplatz"]
+    },
 	 	"Parcheggio": {
 			"it": ["Parcheggi"],
 			"en": ["Parking"],
 			"de": ["Parkplatz"]
 		},
+		
+    "Farmacie": {
+        "it": ["Farmacie"],
+        "en": ["Pharmacies"],
+        "de": ["Apotheken"]
+    },		
 		"Farmacia": {
 			"it": ["Farmacie"],
 			"en": ["Pharmacies"],
