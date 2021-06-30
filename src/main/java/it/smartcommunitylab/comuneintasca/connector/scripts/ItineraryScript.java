@@ -26,6 +26,7 @@ import eu.trentorise.smartcampus.service.opendata.data.message.Opendata.I18nStri
 
 public class ItineraryScript extends OpenContentScript {
 
+	@SuppressWarnings("unchecked")
 	public Message extractData(String itJson, String enJson, String deJson) throws Exception {
 		Map<String, Map<String, Object>> i18n = buildMap(langs, itJson, enJson, deJson);
 		I18nItinerario.Builder builder = I18nItinerario.newBuilder();
