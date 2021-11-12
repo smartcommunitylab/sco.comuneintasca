@@ -70,11 +70,14 @@ public class ConfigProcessor {
 	 * @throws Exception
 	 */
 	public void buildConfig(App app) throws Exception {
+		logger.info("Build config");
 		ListMultimap<String, String> map = ArrayListMultimap.create();
 		if (!StringUtils.isEmpty(app.getHighlightsId())) {
 			List<MenuItem> highlights = Collections.emptyList();
 			try {
+				logger.info("Build config: highlights");
 				highlights = new HighlightsScript().extractContent(app.getHighlightsId(), apikey, app.getObjectUrl(), app.getImagePath(), descriptors);
+				logger.info("Build config: obtained highlights " + highlights.size());
 			} catch (Exception e) {
 				logger.error(e.getMessage(), e);
 			}
