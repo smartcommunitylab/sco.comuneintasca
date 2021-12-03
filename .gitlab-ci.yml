@@ -18,6 +18,8 @@ build:
     - docker build -t $CONTAINER_DEV_IMAGE:$CONTAINER_DEV_TAG -t $CONTAINER_DEV_IMAGE:latest .
     - docker push $CONTAINER_DEV_IMAGE:$CONTAINER_DEV_TAG
     - docker push $CONTAINER_DEV_IMAGE:latest
+  only:
+    - prod
 
 deploy:
   stage: deploy
@@ -29,4 +31,4 @@ deploy:
     - kubectl -n comuneintasca set image deployments/comuneintasca comuneintasca=$CONTAINER_DEV_IMAGE --record=true
     - kubectl -n comuneintasca rollout status deployment comuneintasca
   only:
-    - master
+    - prod
