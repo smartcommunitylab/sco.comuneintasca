@@ -9,23 +9,26 @@ stages:
   - deploy
 
 variables:
-  CONTAINER_DEV_IMAGE: smartcommunitylab/comuneintasca:$CI_COMMIT_SHORT_SHA
-
+  CONTAINER_DEV_IMAGE: smartcommunitylab/comuneintasca
+  CONTAINER_DEV_TAG: $CI_COMMIT_SHORT_SHA
 build:
   stage: build
   script:
     - docker login -u $DHUB_USER -p $DHUB_PASS
-    - docker build -t $CONTAINER_DEV_IMAGE .
-    - docker push $CONTAINER_DEV_IMAGE
+    - docker build -t $CONTAINER_DEV_IMAGE:$CONTAINER_DEV_TAG -t $CONTAINER_DEV_IMAGE:latest .
+    - docker push $CONTAINER_DEV_IMAGE:$CONTAINER_DEV_TAG
+    - docker push $CONTAINER_DEV_IMAGE:latest
+  only:
+    - prod
 
 deploy:
   stage: deploy
   image: smartcommunitylab/kubectl-alpine:latest
   environment:
-    name: develop
+    name: platform-new
   script:
     - echo "deploy"
-    - kubectl -n default set image deployments/comuneintasca comuneintasca=$CONTAINER_DEV_IMAGE --record=true
-    - kubectl -n default rollout status deployment comuneintasca
+    - kubectl -n comuneintasca set image deployments/comuneintasca comuneintasca=$CONTAINER_DEV_IMAGE --record=true
+    - kubectl -n comuneintasca rollout status deployment comuneintasca
   only:
-    - master
+    - prod
