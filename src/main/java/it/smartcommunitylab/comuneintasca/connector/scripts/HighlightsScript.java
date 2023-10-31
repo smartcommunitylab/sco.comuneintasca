@@ -28,8 +28,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 import it.smartcommunitylab.comuneintasca.connector.ConnectionUtils;
+import it.smartcommunitylab.comuneintasca.connector.processor.EventMappingDescriptor;
 import it.smartcommunitylab.comuneintasca.connector.processor.MappingDescriptor;
+import it.smartcommunitylab.comuneintasca.core.model.ContentObject;
+import it.smartcommunitylab.comuneintasca.core.model.HotelObject;
+import it.smartcommunitylab.comuneintasca.core.model.ItineraryObject;
+import it.smartcommunitylab.comuneintasca.core.model.MainEventObject;
 import it.smartcommunitylab.comuneintasca.core.model.MenuItem;
+import it.smartcommunitylab.comuneintasca.core.model.POIObject;
+import it.smartcommunitylab.comuneintasca.core.model.RestaurantObject;
+import it.smartcommunitylab.comuneintasca.core.model.TerritoryServiceObject;
+import it.smartcommunitylab.comuneintasca.core.model.TypeConstants;
 import it.smartcommunitylab.comuneintasca.storage.util.Util;
 
 /**
@@ -70,6 +79,7 @@ public class HighlightsScript extends OpenContentScript {
 		highlights = highlights.subList(1, highlights.size()).stream().filter(row -> row.size() > 0 && row.get(0) != null && StringUtils.hasText(row.get(0).toString())).collect(Collectors.toList());
 		highlights.sort((a,b) -> a.get(0).toString().compareTo(b.get(0).toString()));
 		for (List<Object> line : highlights) {
+			if (line.size() < 5) continue; 
 			MenuItem item = new MenuItem();
 			String objectId = line.get(4).toString();
 			String title = line.get(2).toString();
