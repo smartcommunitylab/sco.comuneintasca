@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  mongo:
+    image: mongo:4.2.6
+    container_name: mongo
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data:/data/db
+  couchdb:
+    image: couchdb:latest
+    container_name: couchdb
+    volumes:
+      - couchdb-data:/usr/local/var/lib/couchdb
+    env_file: ./docker-configs/app.env
+    ports:
+      - "5984:5984"
+  comuneintasca:
+    image: smartcommunitylab/comuneintasca
+    container_name: comuneintasca
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+      - couchdb
+    links:
+      - mongo:mongo
+      - couchdb:couchdb
+    env_file: ./docker-configs/app.env
+volumes:
+  mongo-data:
+  couchdb-data:
