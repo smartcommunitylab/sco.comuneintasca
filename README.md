@@ -10,7 +10,7 @@ mvn clean package -Dmaven.test.skip=true
 
 Build image
 ``
-docker build -t smartcommunitylab/comuneintasca Dockerfile .
+docker build -t smartcommunitylab/comuneintasca .
 ``
 
 Run image
