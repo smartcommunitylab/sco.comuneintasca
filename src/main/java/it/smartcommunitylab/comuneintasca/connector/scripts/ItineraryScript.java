@@ -16,6 +16,7 @@
 package it.smartcommunitylab.comuneintasca.connector.scripts;
 
 import java.math.BigInteger;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -54,7 +55,8 @@ public class ItineraryScript extends OpenContentScript {
 		
 		builder.setInfo(getI18NStringValue(i18n, FIELDS, "info", VALUE));
 		
-		List<String> steps = (List<String>)getRecValue(getMap(i18n,DEFAULT_LANGUAGE), FIELDS, "steps", VALUE, "objectRemoteId");
+		Object stepsObj = getRecValue(getMap(i18n,DEFAULT_LANGUAGE), FIELDS, "steps", VALUE, "objectRemoteId");
+		List<String> steps = (stepsObj instanceof List) ? (List<String>) stepsObj : Collections.singletonList(stepsObj.toString());
 		builder.addAllSteps(steps);
 
 		Object image = getRecValue(getMap(i18n,DEFAULT_LANGUAGE), FIELDS, "image", STRING_VALUE);
